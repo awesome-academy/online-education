@@ -16,6 +16,7 @@ en:
       logged_in_as: "User "
       course: Course
       logout: Logout
+      search: Search
   number:
     currency:
       format:
@@ -44,7 +45,7 @@ en:
       home: Home
   users:
     sign_up_success: Signup success!
-    sign_up_fail: Signup fail!    
+    sign_up_fail: Signup fail!
     logout_success: Log out sucess
     new:
       first_name: First Name
@@ -96,3 +97,38 @@ en:
       log_in: Login
       close: Close
   free: Free
+  questions:
+    new:
+      add_question: Add question
+      create_new_question_for_test: Create new question for test
+      create_answer_for_question: Create answer for question
+      add_answer: Add answer
+      questions_list: Questionslist
+      add_test_question: Add test' questions
+      wrong_trainer: You're not trainer for this course
+    answer_fields:
+      is_correct: Is correct
+      remove_answer: Remove answer
+    question:
+      edit: Edit
+      delete: Delete
+    create:
+      question_created: Question created
+      create_question_fail: Create new question failed
+      create_test_fail: Create new test failed
+  lessons:
+    new:
+      add_lesson: Add lesson
+      enter_lesson_name: Enter lesson name here
+      enter_video_url: Enter lesson video url here
+      add_lessons_to_course: Add lessons to course
+      lessons_list: Lessons list
+      add_course_lessons: Add course' lessons
+      wrong_trainer: You're not trainer for this course
+    lesson:
+      edit: Edit
+      delete: Delete
+      write_test: Write test
+    create:
+      create_lesson_fail: Create new lesson failed
+      course_not_found: Course not found

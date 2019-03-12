@@ -23,6 +23,10 @@ class User < ApplicationRecord
 
   has_secure_password
 
+  def current_user? user
+    self == user
+  end
+
   private
 
   def email_downcase
