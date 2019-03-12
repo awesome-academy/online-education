@@ -4,3 +4,9 @@ max_last_name: 225
 max_password: 225
 min_password: 6
 string_max: 250
+limit: 8
+trcate_text: 100
+trcate_name: 40
+currency: 20_000
+i18n:
+  picture: "56x50"

@@ -1,9 +1,10 @@
 source "https://rubygems.org"
 git_source(:github){|repo| "https://github.com/#{repo}.git"}
 
+gem "bcrypt", "~> 3.1", ">= 3.1.12"
 gem "bootsnap", ">= 1.1.0", require: false
 gem "bootstrap"
-gem "bootstrap-kaminari-views", "~> 0.0.5"
+gem "bootstrap4-kaminari-views"
 gem "carrierwave", "1.2.2"
 gem "ckeditor"
 gem "coffee-rails", "~> 4.2"
@@ -11,6 +12,7 @@ gem "config", "~> 1.7", ">= 1.7.1"
 gem "font-awesome-rails"
 gem "jbuilder", "~> 2.5"
 gem "jquery-rails"
+gem "jwt", "~> 2.1"
 gem "kaminari", "~> 1.1", ">= 1.1.1"
 gem "mini_magick", "4.7.0"
 gem "plyr-rails"
@@ -20,9 +22,6 @@ gem "rubocop", "~> 0.54.0", require: false
 gem "sass-rails", "~> 5.0"
 gem "turbolinks", "~> 5"
 gem "uglifier", ">= 1.3.0"
-
-gem "bcrypt", "~> 3.1", ">= 3.1.12"
-gem "jwt", "~> 2.1"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
