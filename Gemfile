@@ -13,6 +13,7 @@ gem "jbuilder", "~> 2.5"
 gem "jquery-rails"
 gem "kaminari", "~> 1.1", ">= 1.1.1"
 gem "mini_magick", "4.7.0"
+gem "plyr-rails"
 gem "puma", "~> 3.11"
 gem "rails", "~> 5.2.2"
 gem "rubocop", "~> 0.54.0", require: false
