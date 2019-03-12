@@ -1,3 +1,15 @@
+//= require jquery-2.2.4.min.js
+//= require bootstrap.min.js
+//= require easing.min.js
+//= require hoverIntent.js
+//= require superfish.min.js
+//= require jquery.ajaxchimp.min.js
+//= require jquery.magnific-popup.min.js
+//= require jquery.tabs.min.js
+//= require jquery.nice-select.min.js
+//= require owl.carousel.min.js
+//= require mail-script.js
+//= require main.js
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
