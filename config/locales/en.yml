@@ -156,6 +156,15 @@ en:
       lesson: Lessons
     list_lessons:
       dont_have_any_lesson: You don't have any lessons
+  carts:
+    index:
+        checkout: Checkout
+        continue_shopping: Continue shopping
+        shipping_cart: Shipping cart
+    cart:
+      you_dont_have_any_course: You don't have any course
+    total_cost:
+      total_price: Total price
   time:
     formats:
       default: "%a, %d %b %Y %H:%M:%S %z"

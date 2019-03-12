@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="card shopping-cart">
+    <div class="card-header bg-dark text-light">
+      <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+      <%= t ".shipping_cart" %>
+      <%= link_to t(".continue_shoping"), shops_path,
+        class: "btn btn-outline-info btn-sm pull-right" %>
+      <div class="clearfix"></div>
+    </div>
+    <div class="card-body">
+      <div id="carts"><%= render "carts/cart" %></div>
+    </div>
+    <div class="card-footer">
+      <div class="pull-right footer-custom">
+        <%= link_to t(".checkout"), "#", class: "btn btn-danger pull-right" %>
+        <div class="pull-right total">
+          <div id="total"><%= render "carts/total_cost" %></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

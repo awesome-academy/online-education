@@ -19,7 +19,7 @@
             </div>
             <div class="meta d-flex">
               <p>
-                <span class="lnr lnr-users"></span> 
+                <span class="lnr lnr-users"></span>
                 <span class="lnr lnr-bubble"></span>
               </p>
               <h4 class="price">
@@ -30,7 +30,7 @@
           <div class="details">
             <a href="course-details.html">
               <h4>
-                <%= link_to "#" do %>
+                <%= link_to shop_path course do %>
                   <% truncate course.name, length: Settings.trcate_name %>
                 <% end %>
               </h4>

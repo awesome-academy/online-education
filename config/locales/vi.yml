@@ -163,6 +163,15 @@ vi:
       lesson: Bài học
     list_lessons:
       dont_have_any_lesson: Bạn không có bài học nào
+  carts:
+    index:
+      checkout: Mua
+      continue_shopping: Tiếp tục mua sắm
+      shipping_cart: Giỏ hàng
+    cart:
+      you_dont_have_any_course: Bạn không có khóa học nào
+    total_cost:
+      total_price: Tổng chi phí
   time:
     formats:
       default: "%a, %d %m %Y %H:%M:%S %z"
