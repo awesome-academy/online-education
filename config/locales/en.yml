@@ -54,5 +54,5 @@ en:
     new:
       email_address: Email address
       password: Password
-      login: Đăng nhập
-      remember_me: Đăng nhập
+      login: Log in
+      remember_me: Remember me

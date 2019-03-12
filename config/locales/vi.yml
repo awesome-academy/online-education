@@ -32,11 +32,8 @@ vi:
               too_short: quá ngắn (tối thiểu là 6 ký tự)
               blank: không thể để trống
   users:
-    
-  users:
-    create:
-        sign_up_success: Đăng kí thành công.
-        sign_up_fail: Đăng kí thất bại.
+    sign_up_success: Đăng kí thành công.
+    sign_up_fail: Đăng kí thất bại.
     new:
       sign_up: Đăng ký
       first_name: Họ
@@ -58,4 +55,4 @@ vi:
       email_address: Địa chỉ email
       password: Mật khẩu
       login: Đăng nhập
-      remember_me: Remember me
+      remember_me: Ghi nhớ tôi
