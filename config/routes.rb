@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     get "/login", to: "jwt#new"
     post "/login", to: "jwt#create"
     delete "/logout", to: "users#destroy"
+    post "/test_results", to: "test_results#create"
 
     resources :users, only: %i(new create show destroy)
     resources :purchased_courses, only: %i(index show destroy)

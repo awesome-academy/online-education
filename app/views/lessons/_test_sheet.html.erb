@@ -1,0 +1,19 @@
+<% if @questions %>
+  <%= form_tag test_results_path id: @lesson.id do %>
+    <% @questions.each do |question| %>
+      <div class="question">
+        <%= question.content %>
+        <div class="answer">
+        <% question.answers.each do |answer| %>
+          <%= check_box_tag "answer_ids[]", answer.id %>
+          <%= answer.content %><br>
+        <% end %>
+        </div>
+      </div>
+      <br>
+    <% end %>
+    <%= submit_tag t ".submit" %>
+  <% end %>
+<% else %>
+  <%= t ".we_dont_have_any_questions_for_now" %>
+<% end %>

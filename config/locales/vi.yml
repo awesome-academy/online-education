@@ -143,6 +143,7 @@ vi:
       create_question_fail: Tạo câu hỏi mới thất bại
       create_test_fail: Tạo bài kiểm tra mới thất bại
   lessons:
+    lesson_doesnt_exist: Bài học này không còn nữa
     new:
       add_lesson: Thêm bài học
       enter_lesson_name: Nhập tên bài học ở đây
@@ -158,6 +159,9 @@ vi:
     create:
       create_lesson_fail: Tạo bài học mới thất bại
       course_not_found: Không tìm thấy khóa học
+    test_sheet:
+      submit: Submit
+      we_dont_have_any_questions_for_now: Chúng tôi chưa có câu hỏi nào
   courses:
     course_doesnt_exist_anymore: "Chúng tôi xin lỗi nhưng khóa học
       này không còn nữa"
@@ -181,6 +185,8 @@ vi:
       default: "%a, %d %m %Y %H:%M:%S %z"
       long: "%d - %m - %Y %H:%M"
       short: "%d - %m - %H:%M"
+  test_results:
+    your_score: Điểm của bạn
   trainer_candidates:
     new:
       apply_to_course: Ứng tuyển vào khóa học

@@ -5,9 +5,14 @@ module AuthorizationHelper
     decoded.present? ? User.find_by(id: decoded[:user_id]) : nil
   end
 
-  def login user
+  def login user, remember_me
     token = JsonWebToken.encode user_id: user.id
-    cookies[:token] = token
+
+    if remember_me == Settings.condition
+      cookies.permanent[:token] = token
+    else
+      cookies[:token] = token
+    end
   end
 
   def check_login
