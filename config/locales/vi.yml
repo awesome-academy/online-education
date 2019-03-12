@@ -1,1 +1,16 @@
 vi:
+  layouts:
+    header:
+      home: Trang chủ
+      about: Giới thiệu
+      recruitment: Tuyển dụng
+      contact: Liên hệ
+      tag: Tag
+      profile: Hồ sơ
+      settings: Cài đặt
+      owned_course: Khóa học đã mua
+      teaching_course: Khóa học đang dạy
+      signin: Đăng nhập
+      signup: Đăng ký
+      logged_in_as: "Người dùng: "
+      course: Khóa học

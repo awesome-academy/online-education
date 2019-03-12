@@ -1,1 +1,16 @@
 en:
+  layouts:
+    header:
+      home: Home
+      about: About
+      recruitment: Recruitment
+      contact: Contact
+      tag: Tag
+      profile: Profile
+      settings: Settings
+      owned_course: Owned Course
+      teaching_course: Teaching Course
+      signin: Signin
+      signup: Signup
+      logged_in_as: "User: "
+      course: Course
