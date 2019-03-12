@@ -1,0 +1,93 @@
+<% provide :title, t(".create_course") %>
+<div class="container bottom_margin">
+  <div class="row">
+    <div class="col-lg-12 left-contents" >
+      <%= form_with model: @course, url: admin_courses_path,
+        local: true do |f| %>
+
+        <%= render "shared/error_messages", object: f.object %><br>
+
+        <div class="row">
+          <div class="col col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+            <h3 class="h3-title">
+              <%= t ".create_new_course" %>
+            </h3>
+          </div>
+
+          <div class="col col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12">
+            <div>
+              <%= f.label :name, t(".name"), class: :required %>
+              <%= f.text_field :name, class: "form-control",
+                placeholder: t(".enter_course_name") %>
+            </div>
+          </div>
+
+          <div class="col col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12">
+            <div>
+              <%= f.label :overview_video_url, t(".overview_video_url"),
+                class: :required %>
+              <%= f.text_field :overview_video_url, class: "form-control",
+                placeholder: t(".enter_overview_video_url") %>
+            </div>
+          </div>
+
+          <div class="col col-xl-3 col-lg-12 col-md-12 col-sm-12 col-12">
+            <div>
+              <%= f.label :price, t(".price") %>
+              <%= f.text_field :price, class: "form-control",
+                placeholder: t(".enter_price") %>
+            </div>
+          </div>
+
+          <div class="col col-xl-3 col-lg-12 col-md-12 col-sm-12 col-12">
+            <div>
+              <%= f.label :duration, t(".duration") %>
+              <%= f.text_field :duration, class: "form-control",
+                placeholder: t(".enter_duration") %>
+            </div>
+          </div>
+
+          <div class="col col-xl-3 col-lg-12 col-md-12 col-sm-12 col-12">
+              <%= f.label :course_status, t(".status"), class: :required %>
+              <%= f.select :course_status, @list_status,
+                {include_blank: t(".choose_status")}, class: "form-control" %>
+          </div>
+
+          <div class="col col-xl-3 col-lg-12 col-md-12 col-sm-12 col-12">
+            <div>
+              <%= f.label :user_id, t(".trainer") %>
+              <%= f.select :user_id, @list_trainer,
+                {include_blank: t(".choose_trainer")}, class: "form-control" %>
+            </div>
+          </div>
+
+          <div class="col col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12
+            tags-input">
+            <label class="control-label"><%= t ".tag" %>&emsp;</label>
+          </div>
+
+          <div class="col col-xl-3 col-lg-12 col-md-12 col-sm-12 col-12"></div>
+
+          <div class="col col-xl-3 col-lg-12 col-md-12 col-sm-12 col-12">
+            <%= f.submit t(".add_course"), class: "text-uppercase genric-btn
+              primary btn btn-default submit_button" %>
+          </div>
+
+          <div class="col col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12">
+            <div>
+              <%= f.label :description, t(".description") %>
+              <%= f.cktext_area :description, class: "ckeditor", cols: 5 %>
+            </div>
+          </div>
+
+          <div class="col col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12">
+            <div>
+              <%= f.label :employment_conditions, t(".employment_conditions") %>
+              <%= f.cktext_area :employment_conditions, class: "ckeditor" %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

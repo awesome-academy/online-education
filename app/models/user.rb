@@ -11,15 +11,16 @@ class User < ApplicationRecord
 
   before_save :email_downcase
 
-  validates :email, presence: true, length: {maximum: Settings.max_email},
-                    format: {with: URI::MailTo::EMAIL_REGEXP},
-                    uniqueness: {case_sensitive: false}
+  validates :email, presence: true, format: {with: URI::MailTo::EMAIL_REGEXP},
+    length: {maximum: Settings.max_email}, uniqueness: {case_sensitive: false}
   validates :first_name, presence: true,
     length: {maximum: Settings.max_first_name}
   validates :last_name, presence: true,
     length: {maximum: Settings.max_last_name}
   validates :password, allow_nil: true,
     length: {minimum: Settings.min_password, maximum: Settings.max_password}
+
+  scope :trainer_list, ->{where user_type: :trainer}
 
   has_secure_password
 

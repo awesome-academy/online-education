@@ -17,3 +17,4 @@ i18n:
   picture: "56x50"
 page_limit: 8
 text_length: 135
+course_i18n_path: "course.course_status."

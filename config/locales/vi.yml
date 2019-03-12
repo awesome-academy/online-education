@@ -194,3 +194,34 @@ vi:
       description: Miêu tả
     index:
       course_recruiting: Các khóa học đang tuyển dụng
+  course:
+    course_status:
+      recruiting: Đang tuyển dụng
+      building: Đang xây dựng
+      complete: Hoàn thành
+
+  admin:
+    courses:
+      new:
+        create_course: Thêm khóa học
+        create_new_course: Tạo khóa học mới
+        name: Tên
+        overview_video_url: Đường dẫn của video giới thiệu
+        enter_course_name: Nhập tên khóa học ở đây
+        enter_overview_video_url: Nhập đường dẫn của video giới thiệu ở đây
+        price: Giá
+        duration: Thời lượng
+        status: Trạng thái
+        trainer: Giảng viên
+        enter_price: Nhập giá của khóa học ở đây
+        enter_duration: Nhập thời lượng của khóa học ở đây
+        choose_trainer: Hãy chọn giảng viên
+        choose_status: Hãy chọn trạng thái
+        tag: Tag (dùng phím ',' để tạo tag mới)
+        description: Miêu tả
+        employment_conditions: Điều kiện ứng tuyển
+        add_course: Tạo khóa học
+      create:
+        course_created: Tạo khóa học thành công
+        assign_tag_fail: Thêm tag cho khóa học thất bại
+        create_tag_fail: Tạo tag mới cho khóa học thất bại
