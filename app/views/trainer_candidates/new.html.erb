@@ -1,35 +1,100 @@
-<% provide :title, t(".add_test_question") %>
+<% provide :title, t(".apply_to_course") %>
   <div class="container">
     <div class="row">
       <div class="col-lg-12 left-contents" >
-        <%= form_for [:course, @trainer_candidates] do |f| %>
+        <%= form_with model: [:course, @trainer_candidate],
+          local: true do |f| %>
+          <%= render "shared/error_messages", object: f.object %>
           <div class="row">
             <div class="col col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
               <h3 class="h3-title">
-                <%= t ".create_new_question_for_test" %>
+                <%= t ".apply_to_course" %>
               </h3>
             </div>
 
-            <div class="col col-xl-5 col-lg-12 col-md-12 col-sm-12 col-12">
+            <div class="col col-xl-4 col-lg-12 col-md-12 col-sm-12 col-12">
               <div>
+                <%= f.label :introduce, t(".introduce") %>
                 <%= f.text_field :introduce, class: "form-control",
-                  placeholder: t(".write_about_yourself") %>
+                  placeholder: t(".write_about_you") %>
               </div>
             </div>
 
-             <div class="col col-xl-5 col-lg-12 col-md-12 col-sm-12 col-12">
+            <div class="col col-xl-4 col-lg-12 col-md-12 col-sm-12 col-12">
               <div>
-                <%= f.text_field :introduce, class: "form-control",
-                  placeholder: t(".enter_video_url") %>
+                <%= f.label :cv_url, t(".cv_url") %>
+                <%= f.text_field :cv_url, class: "form-control",
+                  placeholder: t(".enter_cv_url") %>
               </div>
             </div>
 
-            <div class="col col-xl-2 col-lg-12 col-md-12 col-sm-12 col-12">
+            <div class="col col-xl-4 col-lg-12 col-md-12 col-sm-12 col-12">
               <%= f.submit t(".apply"),
-                class: "text-uppercase genric-btn primary btn btn-default" %>
+                class: "text-uppercase genric-btn primary btn btn-default
+                  submit_button" %>
             </div>
           </div>
         <% end %>
+      </div>
+
+      <div class="col col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+        <h3 class="h3-title">
+          <%= t ".course_info" %>
+        </h3>
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 left-contents">
+            <div class="main-image">
+            <%= image_tag "m-img.jpg", class: "img-fluid" %>
+            </div>
+            <div class="jq-tab-wrapper bottom_margin" id="horizontalTab">
+              <div class="jq-tab-menu">
+                <div class="jq-tab-title active" data-tab="1">
+                  <%= t ".employment_conditions" %>
+                </div>
+                <div class="jq-tab-title" data-tab="2">
+                  <%= t ".description" %>
+                </div>
+              </div>
+              <div class="jq-tab-content-wrapper">
+                <div class="jq-tab-content" data-tab="2">
+                  <% if @course.description %>
+                    <%= render html: @course.description.html_safe %>
+                  <% end %>
+                </div>
+                <div class="jq-tab-content active" data-tab="1">
+                  <% if @course.employment_conditions %>
+                    <%= render html: @course.employment_conditions.html_safe %>
+                  <% end %>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 right-contents">
+            <ul>
+              <li>
+                <span class="justify-content-between d-flex">
+                  <p><%= t ".name" %></p>
+                  <span class="or"><%= @course.name %></span>
+                </span>
+              </li>
+              <li>
+                <span class="justify-content-between d-flex">
+                  <p><%= t ".course_status"%></p>
+                  <span><%= @course.course_status %></span>
+                </span>
+              </li>
+              <li>
+                <span class="justify-content-between d-flex">
+                  <p><%= t ".course_fee" %></p>
+                  <span><%= @course.price %></span>
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </div>

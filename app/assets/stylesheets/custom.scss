@@ -74,8 +74,8 @@ label.required:after {
 }
 
 .submit_button {
-  margin-top: 29px;
-} 
+  margin-top: 35px;
+}
 
 .timestamp {
   padding-top: 5px
@@ -178,4 +178,8 @@ label.required:after {
 
 .delete-btn, .cost {
   color: $EC
+}
+
+.bottom_margin {
+  margin-bottom: 30px;
 }

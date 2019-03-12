@@ -1,4 +1,6 @@
 en:
+  cant_apply_twice: You already apply for this course
+
   views:
     pagination:
       first: "« FIRST"
@@ -110,7 +112,7 @@ en:
       course: Your Course
       available_course_of: Available course of
     list_user_course:
-      are_you_sure: "Are you sure you want to delete the article? 
+      are_you_sure: "Are you sure you want to delete the article?
       If you delete this course, you won't be able to read this course anymore!"
       you_dont_have_any_course: You don't have any course
       buy_some_course: Buy some course?
@@ -156,6 +158,8 @@ en:
       lesson: Lessons
     list_lessons:
       dont_have_any_lesson: You don't have any lessons
+    course:
+      apply: Apply
   carts:
     index:
         checkout: Checkout
@@ -170,3 +174,14 @@ en:
       default: "%a, %d %b %Y %H:%M:%S %z"
       long: "%B %d, %Y %H:%M"
       short: "%d %b %H:%M"
+  trainer_candidates:
+    new:
+      apply_to_course: Apply to course
+      course_info: Course info
+      introduce: Introduce
+      cv_url: CV url
+      write_about_you: Write about yourself here
+      enter_cv_url: Write your CV url here
+      apply: Apply
+    index:
+      course_recruiting: Recruiting courses

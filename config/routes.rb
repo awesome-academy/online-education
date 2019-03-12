@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/ do
     root "pages#index"
     get "/signup", to: "users#new"
+    get "/recruitment", to: "trainer_candidates#index"
     post "/signup", to: "users#create"
     get "/login", to: "jwt#new"
     post "/login", to: "jwt#create"
@@ -12,6 +13,7 @@ Rails.application.routes.draw do
     resources :purchased_courses, only: %i(index show destroy)
     resources :courses, only: %i(show) do
       resources :lessons, only: %i(index new create)
+      resources :trainer_candidates, only: %i(new create)
     end
     resources :lessons, only: %i(show) do
       resources :questions, only: %i(new create destroy)

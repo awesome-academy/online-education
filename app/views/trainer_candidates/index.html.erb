@@ -1,0 +1,7 @@
+<% provide :title, t(".course_recruiting") %>
+<div class="row align-items-center">
+  <%= render @courses %>
+  <div class="kaminari">
+    <%= paginate @courses, theme: "twitter-bootstrap-4" %>
+  </div>
+</div>
