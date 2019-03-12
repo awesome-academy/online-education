@@ -34,6 +34,7 @@ vi:
   users:
     sign_up_success: Đăng kí thành công.
     sign_up_fail: Đăng kí thất bại.
+    logout_success: Đăng xuất thành công
     new:
       sign_up: Đăng ký
       first_name: Họ
@@ -51,6 +52,7 @@ vi:
   jwt:
     login_success: Đăng nhập thành công
     login_fail: Email hoặc password sai
+    logout: Đăng xuất
     new:
       email_address: Địa chỉ email
       password: Mật khẩu

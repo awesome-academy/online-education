@@ -80,6 +80,7 @@
                     <%= link_to t(".teaching_course"), "#" %>
                   </li>
                 <% end %>
+                <li><%= link_to t(".logout"), logout_path, method: :delete %></li>
               </ul>
             </li>
           <% else %>

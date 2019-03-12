@@ -12,7 +12,7 @@ class JwtController < ApplicationController
       redirect_to user
     else
       flash.now[:danger] = t ".login_fail"
-      render login_path
+      render :new
     end
   end
 

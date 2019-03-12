@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :check_login, only: :new
+  before_action :check_user, only: :show
 
   def new
     @user = User.new
@@ -20,6 +21,12 @@ class UsersController < ApplicationController
 
   def show
     @user = current_user
+  end
+
+  def destroy
+    logout if logged_in?
+    flash[:success] = t ".logout_success"
+    redirect_to root_path
   end
 
   private
