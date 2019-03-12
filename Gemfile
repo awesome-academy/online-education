@@ -17,6 +17,9 @@ gem "sass-rails", "~> 5.0"
 gem "turbolinks", "~> 5"
 gem "uglifier", ">= 1.3.0"
 
+gem "bcrypt", "~> 3.1", ">= 3.1.12"
+gem "jwt", "~> 2.1"
+
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
   gem "factory_bot_rails"
