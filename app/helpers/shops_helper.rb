@@ -7,7 +7,7 @@ module ShopsHelper
   private
 
   def convert_to_american cash
-    number_to_currency cash    
+    number_to_currency cash
   end
 
   def convert_to_vietnam cash

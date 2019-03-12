@@ -70,8 +70,31 @@ vi:
       login: Đăng nhập
       remember_me: Ghi nhớ tôi
   shops:
+    dont_have_this_course: Chúng tôi không có khóa học này
     index:
       shop: Cửa hàng
       popular_course: Những khóa học khuyên dùng
       quote: Có một khoảnh khắc trong cuộc sống của bất kỳ tham vọng...
+    show:
+      course_detail: Chi tiết khóa học
+      description: Mô tả
+      teacher: Giảng viên
+      lessons: giới thiệu các bài học
+      comments: Bình luận
+      reviews: Đánh giá
+      trainer_name: Giảng viên
+      course_fee: Học phí
+      duration: Tổng thời gian
+      add_to_cart: Thêm vào giỏ hàng
+    lesson_outline:
+      view_details: Xem chi tiết
+      dont_have_any_lesson: Chúng tôi chưa có bài học nào cho khóa học này
+    modal:
+      log_in: Đăng nhập
+      already_have_an_account: Bạn đã có tài khoản?
+      continue_with_facebook: Tiếp tục với facebook
+      create_an_account: Tạo tài khoản
+      need_an_account: Bạn sẽ cần một tài khoản để sở hữu những khóa học này
+      add_to_cart: Thêm vào giỏ hàng
+      close: Đóng
   free: Miễn phí

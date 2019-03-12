@@ -68,8 +68,31 @@ en:
       login: Log in
       remember_me: Remember me
   shops:
+    dont_have_this_course: We don't have this course
     index:
       shop: Shop
       popular_course: Popular Courses we offer
       quote: There is a moment in the life of any aspiring.
+    show:
+      course_detail: Course detail
+      description: Description
+      teacher: Teacher
+      lessons: Lessons
+      comments: Comments
+      reviews: Reviews
+      trainer_name: Trainer's name
+      course_fee: Course Fee
+      duration: Duration
+      add_to_cart: Add to cart
+    lesson_outline:
+      view_details: View details
+      dont_have_any_lesson: We don't have any lesson for this course
+    modal:
+      already_have_an_account: Already have an account?
+      continue_with_facebook: Continue with facebook
+      create_an_account: Create an account
+      need_an_account: You’ll need an account to get to your courses
+      add_to_cart: Add to cart
+      log_in: Login
+      close: Close
   free: Free

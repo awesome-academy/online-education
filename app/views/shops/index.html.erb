@@ -10,12 +10,12 @@
       </div>
     </div>
     <div class="row">
-      <% @courses.each do |c| %>
+      <% @courses.each do |course| %>
         <div class="single-popular-carusel col-lg-3 col-md-6" >
           <div class="thumb-wrap relative fix-it">
             <div class="thumb relative">
               <div class="overlay overlay-bg"></div>
-              <%= link_to image_tag("b1"), "#" %>
+              <%= link_to image_tag("b1"), shop_path(course) %>
             </div>
             <div class="meta d-flex">
               <p>
@@ -23,7 +23,7 @@
                 <span class="lnr lnr-bubble"></span>
               </p>
               <h4 class="price">
-                <%= change_currency_on params[:locale], c.price %>
+                <%= change_currency_on params[:locale], course.price %>
               </h4>
             </div>
           </div>
@@ -31,12 +31,12 @@
             <a href="course-details.html">
               <h4>
                 <%= link_to "#" do %>
-                  <% truncate c.name, length: Settings.trcate_name %>
+                  <% truncate course.name, length: Settings.trcate_name %>
                 <% end %>
               </h4>
             </a>
             <p>
-              <%= truncate c.description, length: Settings.trcate_text %>
+              <%= truncate course.description, length: Settings.trcate_text %>
             </p>
           </div>
         </div>

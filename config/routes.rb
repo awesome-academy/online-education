@@ -13,6 +13,6 @@ Rails.application.routes.draw do
       resources :lessons, only: %i(index new create show)
     end
 
-    resources :shops, only: :index
+    resources :shops, only: %i(index show)
   end
 end
