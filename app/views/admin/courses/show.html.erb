@@ -1,0 +1,12 @@
+<% provide :title, t(".list_trainer_candidates") %>
+<div class="container">
+  <div class="card shopping-cart">
+    <div class="card-header bg-dark text-light">
+      <%= t ".trainer_candidates" %>
+      <div class="clearfix"></div>
+    </div>
+    <div class="card-body">
+      <div id="list_candidates"><%= render @list_candidates %></div>
+    </div>
+  </div>
+</div>

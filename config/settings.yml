@@ -21,3 +21,4 @@ en: en
 vi: vi
 i18n:
   picture: "56x50"
+default_value: 0

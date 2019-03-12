@@ -3,7 +3,8 @@ class TestResultsController < ApplicationController
 
   def create
     questions = marking
-    flash[:success] = t(".your_score")+": #{questions}/#{total_questions.count}"
+    flash[:success] = t(".your_score") + ": #{questions}
+      /#{total_questions.count}"
     redirect_to lesson_path params[:id]
   end
 

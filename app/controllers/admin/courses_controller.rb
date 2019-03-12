@@ -1,6 +1,10 @@
 class Admin::CoursesController < ApplicationController
+  before_action :check_admin
   before_action :list_courses, only: %i(index)
   before_action :data_list, only: %i(new)
+  before_action :search_course, only: %i(show update destroy)
+  before_action :list_candidates, only: %i(show)
+  before_action :assign_user_as_trainer, only: %i(update)
 
   def index; end
 
@@ -19,6 +23,27 @@ class Admin::CoursesController < ApplicationController
       flash.now[:danger] = t ".create_course_fail"
       data_list
       render :new
+    end
+  end
+
+  def show; end
+
+  def update
+    if @course.update trainer: @user, course_status: :building
+      flash[:success] = t ".assign_trainer_success"
+      redirect_to admin_courses_path
+    else
+      flash[:danger] = t ".assign_trainer_failed"
+      redirect_to admin_course_path @course
+    end
+  end
+
+  def destroy
+    @course.destroy
+    list_courses
+    respond_to do |format|
+      format.html{redirect_to admin_courses_path}
+      format.js
     end
   end
 
@@ -57,7 +82,7 @@ class Admin::CoursesController < ApplicationController
   end
 
   def assign_tag_to_course
-    @course_tag = @course.course_tags.build tag_id: @tag.id
+    @course_tag = @course.course_tags.build tag: @tag
 
     return if @course_tag.save
     flash[:danger] = t(".assign_tag_fail") + @tag.name
@@ -65,5 +90,32 @@ class Admin::CoursesController < ApplicationController
 
   def list_courses
     @list_courses = Course.course_in_recruitment
+  end
+
+  def list_candidates
+    @list_candidates = @course.trainer_candidates.includes :user
+  end
+
+  def search_course
+    @course = Course.find_by id: params[:id]
+
+    return if @course
+    flash[:danger] = t ".course_not_found"
+    redirect_to admin_courses_path
+  end
+
+  def assign_user_as_trainer
+    @user = User.find_by id: params[:user_id]
+    @user.trainer!
+
+    return if @user.save
+    flash[:danger] = t ".assign_trainer_fail"
+    redirect_to admin_course_path @course
+  end
+
+  def check_admin
+    return if current_user.admin?
+    flash[:danger] = t ".not_admin"
+    redirect_to root_path
   end
 end

@@ -26,7 +26,7 @@ Rails.application.routes.draw do
     end
     
     namespace :admin do
-      resources :courses, only: %i(index new create)
+      resources :courses, except: %i(edit)
     end
   end
 end
