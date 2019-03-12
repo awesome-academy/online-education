@@ -10,10 +10,10 @@ class UsersController < ApplicationController
 
     if @user.save
       login @user
-      flash[:success] = t :sign_up_success
+      flash[:success] = t ".sign_up_success"
       redirect_to @user
     else
-      flash.now[:danger] = t :sign_up_fail
+      flash.now[:danger] = t ".sign_up_fail"
       render :new
     end
   end

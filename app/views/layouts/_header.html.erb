@@ -36,7 +36,8 @@
       </div>
       <div>
         <%= form_with scope: :search do |f| %>
-          <%= f.text_field :name, placeholder: t(".search"), type: "email" %>
+          <%= f.text_field :name, placeholder: t(".search"), type: "email",
+            class: "search" %>
           <%= button_tag class: "btn btn-default genric-btn primary" do %>
             <span class="lnr lnr-magnifier"></span>
           <% end %>
@@ -45,36 +46,45 @@
       </div>
       <nav id="nav-menu-container">
         <ul class="nav-menu">
-          <li><%= link_to t(".home"),"index_path" %></li>
-          <li><%= link_to t(".about"), "about_path" %></li>
-          <li><%= link_to t(".recruitment"),"recruitment_path" %></li>
-          <li><%= link_to t(".contact"),"contact_path" %></li>
-          <li class="menu-has-children">
-            <%= link_to t(".course"), "course_path" %>
-            <ul>
-              <li><%= link_to t(".tag"),"tag_path" %></li>
-            </ul>
+          <li>
+            <%= link_to t(".home"), "#" %>
           </li>
-          <% if true %> <%# neu da dang nhap %>
+          <li>
+            <%= link_to t(".about"), "#" %>
+          </li>
+          <li>
+            <%= link_to t(".recruitment"), "#" %>
+          </li>
+          <li>
+            <%= link_to t(".contact"), "#" %>
+          </li>
+          <li>
+            <%= link_to t(".course"), "#" %>
+          </li>
+          <% if logged_in? %>
             <li class="menu-has-children">
               <%= link_to t(".logged_in_as"), "#" %>
               <ul>
-                <li><%= link_to t(".profile"),"profile_path" %></li>
-                <li><%= link_to t(".settings"),"setting_path" %></li>
-                <% if true %> <%# eu la trainee %>
+                <li>
+                  <%= link_to t(".profile"), "#" %>
+                </li>
+                <li>
+                  <%= link_to t(".settings"), "#" %>
+                </li>
+                <% if current_user.trainee? %>
                   <li>
-                    <%= link_to t(".owned_course"),"ownedcourse_path" %>
+                    <%= link_to t(".owned_course"), "#" %>
                   </li>
-                <% else %> <%# neu la trainer %>
+                <% elsif current_user.trainer? %>
                   <li>
-                    <%= link_to t(".teaching_course"),"ownedcourse_path" %>
+                    <%= link_to t(".teaching_course"), "#" %>
                   </li>
                 <% end %>
               </ul>
             </li>
-          <% else %>  <%# neu chua dang nhap %>
-            <li><%= link_to t(".signin"),"signin_path" %></li>
-            <li><%= link_to t(".signup"),"signup_path" %></li>
+          <% else %>
+            <li><%= link_to t(".signup"), signup_path %></li>
+            <li><%= link_to t(".signin"), login_path %></li>
           <% end %>
         </ul>
       </nav>

@@ -1,0 +1,17 @@
+<% provide :title, t(".login") %>
+<div class="container">
+  <div class="col-lg-4 col-md-6 search-course-right signup-form">
+    <%= form_with scope: :login, url: login_path,
+      local: true, class: "form-wrap" do |l| %>
+      <%= l.text_field :email, class: "form-control",
+        placeholder: t(".email_address") %>
+      <%= l.password_field :password, class: "form-control",
+        placeholder: t(".password") %>
+      <%= l.label :remember_me, class: "checkbox inline" do %>
+        <%= l.check_box :remember_me %>
+        <span><%= t ".remember_me" %></span>
+      <% end %><br>
+      <%= l.submit t(".login"), class: "primary-btn text-uppercase" %>
+    <% end %>
+  </div>
+</div>

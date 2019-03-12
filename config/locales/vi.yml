@@ -1,6 +1,7 @@
 vi:
   layouts:
     header:
+      search: Tìm kiếm
       home: Trang chủ
       about: Giới thiệu
       recruitment: Tuyển dụng
@@ -14,6 +15,7 @@ vi:
       signup: Đăng ký
       logged_in_as: "Người dùng "
       course: Khóa học
+      logout: Đăng xuất
   activerecord:
     errors:
       models:
@@ -29,12 +31,12 @@ vi:
             password:
               too_short: quá ngắn (tối thiểu là 6 ký tự)
               blank: không thể để trống
-  sign_up_success: Đăng kí thành công.
-  sign_up_fail: Đăng kí thất bại.
-  you_need_to_signup: Bạn cần phải đăng nhập lại
-  no_user_found: Không tìm thấy người dùng phù hợp
-  user_not_found: Không tìm thấy người dùng
   users:
+    
+  users:
+    create:
+        sign_up_success: Đăng kí thành công.
+        sign_up_fail: Đăng kí thất bại.
     new:
       sign_up: Đăng ký
       first_name: Họ
@@ -42,9 +44,18 @@ vi:
       email: Email
       birthday: Ngày sinh
       password: Mật khẩu
-      password_confirm: Mật khẩu, lần nữa...
+      password_confirm: Xác nhận mật khẩu
       create_my_acc: Tạo tài khoản
+      must_have: Bắt buộc
   shared:
     error_messages:
       the_form_contain: Form đang có
       error: lỗi
+  jwt:
+    login_success: Đăng nhập thành công
+    login_fail: Email hoặc password sai
+    new:
+      email_address: Địa chỉ email
+      password: Mật khẩu
+      login: Đăng nhập
+      remember_me: Remember me

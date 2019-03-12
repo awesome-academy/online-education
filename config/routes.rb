@@ -4,6 +4,8 @@ Rails.application.routes.draw do
     root "pages#index"
     get "/signup", to: "users#new"
     post "/signup", to: "users#create"
+    get "/login", to: "jwt#new"
+    post "/login", to: "jwt#create"
 
     resources :users, only: %i(new create show)
     resources :courses, only: %i(index show) do

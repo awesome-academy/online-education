@@ -4,21 +4,29 @@
 <% unless logged_in? %>
   <div class="container">
     <div class="col-lg-4 col-md-6 search-course-right signup-form">
-      <%= form_with model: @user, url: signup_path, local: true, class: "form-wrap" do |f| %>
+      <%= form_with model: @user, url: signup_path,
+        local: true, class: "form-wrap" do |f| %>
         <%= render "shared/error_messages", object: f.object %><br>
 
-        <%= f.text_field :first_name, class: "form-control",
-          placeholder: t(".first_name") %>
-        <%= f.text_field :last_name, class: "form-control",
-          placeholder: t(".last_name") %>
-        <%= f.text_field :email, class: "form-control",
-          placeholder: t(".email") %>
-        <%= f.date_field :birthday, class: "form-control",
-          placeholder: t(".birthday") %>
-        <%= f.password_field :password, class: "form-control",
+        <%= f.label :first_name, t(".first_name"), class: "required" %>
+        <%= f.text_field :first_name, class: "form-control", required: true %>
+
+        <%= f.label :last_name, t(".last_name"), class: "required" %>
+        <%= f.text_field :last_name, class: "form-control", required: true %>
+
+        <%= f.label :email, t(".email"), class: "required" %>
+        <%= f.text_field :email, class: "form-control" %>
+
+        <%= f.label :birthday, t(".birthday") %>
+        <%= f.date_field :birthday, class: "form-control" %>
+
+        <%= f.label :password, t(".password"), class: "required" %>
+        <%= f.password_field :password, class: "form-control", required: true,
           placeholder: t(".password") %>
+
+        <%= f.label :password_confirmation, t(".password_confirm"), class: "required" %>
         <%= f.password_field :password_confirmation, class: "form-control",
-          placeholder: t(".password_confirm") %>
+          required: true %>
 
         <%= f.submit t(".create_my_acc"),
           class: "primary-btn text-uppercase" %>
