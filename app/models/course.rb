@@ -8,4 +8,6 @@ class Course < ApplicationRecord
   has_many :users, through: :purchased_courses, dependent: :destroy
   belongs_to :trainer, class_name: User.name,
     foreign_key: :user_id, optional: true
+
+  validates :description, length: {maximum: Settings.text_max}
 end

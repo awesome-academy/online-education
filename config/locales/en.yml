@@ -96,6 +96,19 @@ en:
       add_to_cart: Add to cart
       log_in: Login
       close: Close
+  purchased_courses:
+    destroy_sucess: Delete successful
+    destroy_fail: Delete failed
+    no_course: This course doesn't exist
+    index:
+      course: Your Course
+      available_course_of: Available course of
+    list_user_course:
+      you_dont_have_any_course: You don't have any course
+      are_you_sure: "Are you sure you want to delete the article? 
+      If you delete this course, you won't be able to read this course anymore!"
+      you_dont_have_any_course: You don't have any course
+      buy_some_course: Buy some course?
   free: Free
   questions:
     new:

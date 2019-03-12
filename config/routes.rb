@@ -9,7 +9,8 @@ Rails.application.routes.draw do
     delete "/logout", to: "users#destroy"
 
     resources :users, only: %i(new create show destroy)
-    resources :courses, only: %i(index show) do
+    resources :purchased_courses, only: %i(index destroy)
+    resources :courses, only: %i(show) do
       resources :lessons, only: %i(index new create show)
     end
     resources :lessons, only: %i(show) do
