@@ -1,4 +1,4 @@
 $(function () {
-    "use strict";
-    $('#nav').singlePageNav();
+  "use strict";
+  $('#nav').singlePageNav();
 });
