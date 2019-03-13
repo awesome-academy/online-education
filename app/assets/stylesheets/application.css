@@ -1,4 +1,14 @@
 /*
+ *= require font-awesome
+ *= require linearicons.css
+ *= require font-awesome.min.css
+ *= require bootstrap.css
+ *= require magnific-popup.css
+ *= require nice-select.css
+ *= require animate.min.css
+ *= require owl.carousel.css
+ *= require jquery-ui.css
+ *= require main.css
  *= require_tree .
  *= require_self
  */
