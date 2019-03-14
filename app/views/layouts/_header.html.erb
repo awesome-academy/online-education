@@ -1,0 +1,75 @@
+<header id="header" id="home">
+  <div class="header-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 col-sm-6 col-8 header-top-left no-padding">
+          <ul>
+            <li>
+              <%= link_to "#" do %><i class="fa fa-facebook"></i><% end %>
+            </li>
+            <li>
+              <%= link_to "#" do %><i class="fa fa-twitter"></i><% end %>
+            </li>
+            <li>
+              <%= link_to "#" do %><i class="fa fa-dribbble"></i><% end %>
+            </li>
+            <li>
+              <%= link_to "#" do %><i class="fa fa-behance"></i><% end %>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-6 col-sm-6 col-4 header-top-right no-padding">
+          <%= link_to "#" do %><span class="lnr lnr-phone-handset"></span>
+            <span class="text">+953 012 3654 896</span>
+          <% end %>
+          <%= link_to "#" do %><span class="lnr lnr-envelope"></span>
+            <span class="text">support@colorlib.com</span>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container main-menu">
+    <div class="row align-items-center justify-content-between d-flex">
+      <div id="logo">
+        <%= link_to "index.html" do %><%= image_tag("logo.png") %><% end %>
+      </div>
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <%= link_to "" do %> <% end %>
+          <li><%= link_to t(".home"),"index_path" %></li>
+          <li><%= link_to t(".about"), "about_path" %></li>
+          <li><%= link_to t(".recruitment"),"recruitment_path" %></li>
+          <li><%= link_to t(".contact"),"contact_path" %></li>
+          <li class="menu-has-children">
+            <%= link_to t(".course"), "course_path" %>
+            <ul>
+              <li><%= link_to t(".tag"),"tag_path" %></li>
+            </ul>
+          </li>
+          <% if true %> <%# neu da dang nhap %>
+            <li class="menu-has-children">
+              <%= link_to t(".logged_in_as"), "#" %>
+              <ul>
+                <li><%= link_to t(".profile"),"profile_path" %></li>
+                <li><%= link_to t(".settings"),"setting_path" %></li>
+                <% if true %> <%# eu la trainee %>
+                  <li>
+                    <%= link_to t(".owned_course"),"ownedcourse_path" %>
+                  </li>
+                <% else %> <%# neu la trainer %>
+                  <li>
+                    <%= link_to t(".teaching_course"),"ownedcourse_path" %>
+                  </li>
+                <% end %>
+              </ul>
+            </li>
+          <% else %>  <%# neu chua dang nhap %>
+            <li><%= link_to t(".signin"),"signin_path" %></li>
+            <li><%= link_to t(".signup"),"signup_path" %></li>
+          <% end %>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
