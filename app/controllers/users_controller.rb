@@ -14,7 +14,6 @@ class UsersController < ApplicationController
       flash[:success] = t ".sign_up_success"
       redirect_to @user
     else
-      flash.now[:danger] = t ".sign_up_fail"
       render :new
     end
   end
@@ -26,7 +25,7 @@ class UsersController < ApplicationController
   def destroy
     logout if logged_in?
     flash[:success] = t ".logout_success"
-    redirect_to root_path
+    redirect_to login_path
   end
 
   private

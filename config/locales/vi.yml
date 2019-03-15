@@ -1,4 +1,11 @@
 vi:
+  views:
+    pagination:
+      first: "« ĐẦU"
+      last: "CUỐI »"
+      previous: "‹ TRƯỚC"
+      next: "SAU ›"
+      truncate: "…"
   layouts:
     header:
       search: Tìm kiếm
@@ -149,3 +156,15 @@ vi:
     create:
       create_lesson_fail: Tạo bài học mới thất bại
       course_not_found: Không tìm thấy khóa học
+  courses:
+    course_doesnt_exist_anymore: "Chúng tôi xin lỗi nhưng khóa học 
+      này không còn nữa"
+    show:
+      lesson: Bài học
+    list_lessons:
+      dont_have_any_lesson: Bạn không có bài học nào
+  time:
+    formats:
+      default: "%a, %d %m %Y %H:%M:%S %z"
+      long: "%d - %m - %Y %H:%M"
+      short: "%d - %m - %H:%M"

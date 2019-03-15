@@ -1,0 +1,26 @@
+<% provide :title, t(".lesson") %>
+
+<% if @course.present? %>
+  <div class="course-detail">
+    <div class="course-name">
+      <h3><b><p><%= @course.name %></p></b></h3>
+      <br>
+      <p><%= @course.description %></p>
+    </div>
+  </div>
+<% end %>
+
+<div class="container">
+  <div class="card shopping-cart">
+    <div class="card-header bg-dark text-light">
+      <div class="clearfix"></div>
+    </div>
+    <div class="card-body">
+      <%= render "courses/list_lessons" %>
+    </div>
+  </div>
+  <br>
+  <div class="kaminari">
+    <%= paginate @list_lessons, theme: "twitter-bootstrap-4" %>
+  </div>
+</div>

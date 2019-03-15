@@ -1,0 +1,20 @@
+<% if @list_lessons.present? %>
+  <% @list_lessons.each do |lesson| %>
+    <div class="row">
+      <div class="col-12 col-sm-12 col-md-2 text-center"></div>
+      <div class="col-12 text-sm-center col-sm-12 text-md-left col-md-6">
+        <h4 class="product-name">
+          <strong>
+            <%= link_to "#" do %>
+              <%= truncate lesson.name,
+                length: Settings.trcate_text %>
+            <% end %>
+          </strong>
+        </h4>
+      </div>
+    </div>
+    <hr>
+  <% end %>
+<% else %>
+  <%= t ".dont_have_any_lesson" %>
+<% end %>
