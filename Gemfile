@@ -2,11 +2,14 @@ source "https://rubygems.org"
 git_source(:github){|repo| "https://github.com/#{repo}.git"}
 
 gem "bootsnap", ">= 1.1.0", require: false
+gem "bootstrap"
+gem "bootstrap-kaminari-views", "~> 0.0.5"
 gem "coffee-rails", "~> 4.2"
 gem "config", "~> 1.7", ">= 1.7.1"
 gem "font-awesome-rails"
 gem "jbuilder", "~> 2.5"
 gem "jquery-rails"
+gem "kaminari", "~> 1.1", ">= 1.1.1"
 gem "puma", "~> 3.11"
 gem "rails", "~> 5.2.2"
 gem "rubocop", "~> 0.54.0", require: false
