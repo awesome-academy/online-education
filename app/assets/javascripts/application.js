@@ -10,6 +10,8 @@
 //= require owl.carousel.min.js
 //= require mail-script.js
 //= require main.js
+//= require ckeditor/init
+//= require ckeditor/config
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
