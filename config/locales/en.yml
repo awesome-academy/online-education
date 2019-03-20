@@ -12,5 +12,39 @@ en:
       teaching_course: Teaching Course
       signin: Signin
       signup: Signup
-      logged_in_as: "User: "
+      logged_in_as: "User "
       course: Course
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              blank: can't be blank
+              invalid: can't be blank
+            first_name:
+              blank: can't be blank
+            last_name:
+              blank: can't be blank
+            password:
+              too_short: is too short (minimum is 6 characters)
+              blank: can't be blank
+  sign_up_success: Signup success!
+  you_need_to_signup: You need to sign up
+  sign_up_fail: Signup fail!
+  no_user_found: No user found
+  user_not_found: user not found!
+  users:
+    new:
+      sign_up: Sign up
+      first_name: First Name
+      last_name: Last Name
+      email: Email
+      birthday: Birthday
+      password: Password
+      password_confirm: Password, again...
+      create_my_acc: Create my account
+  shared:
+    error_messages:
+      the_form_contain: The form contains
+      error: errors

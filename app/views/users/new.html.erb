@@ -1,0 +1,28 @@
+<% provide :title, t(".sign_up") %>
+<h1 class="sign-up"><%= t ".sign_up" %></h1>
+
+<% unless logged_in? %>
+  <div class="container">
+    <div class="col-lg-4 col-md-6 search-course-right signup-form">
+      <%= form_with model: @user, url: signup_path, local: true, class: "form-wrap" do |f| %>
+        <%= render "shared/error_messages", object: f.object %><br>
+
+        <%= f.text_field :first_name, class: "form-control",
+          placeholder: t(".first_name") %>
+        <%= f.text_field :last_name, class: "form-control",
+          placeholder: t(".last_name") %>
+        <%= f.text_field :email, class: "form-control",
+          placeholder: t(".email") %>
+        <%= f.date_field :birthday, class: "form-control",
+          placeholder: t(".birthday") %>
+        <%= f.password_field :password, class: "form-control",
+          placeholder: t(".password") %>
+        <%= f.password_field :password_confirmation, class: "form-control",
+          placeholder: t(".password_confirm") %>
+
+        <%= f.submit t(".create_my_acc"),
+          class: "primary-btn text-uppercase" %>
+      <% end %>
+    </div>
+  </div>
+<% end %>

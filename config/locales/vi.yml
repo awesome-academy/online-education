@@ -12,5 +12,39 @@ vi:
       teaching_course: Khóa học đang dạy
       signin: Đăng nhập
       signup: Đăng ký
-      logged_in_as: "Người dùng: "
+      logged_in_as: "Người dùng "
       course: Khóa học
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              blank: không thể để trống
+              invalid: không hợp lệ              
+            first_name:
+              blank: không thể để trống
+            last_name:
+              blank: không thể để trống
+            password:
+              too_short: quá ngắn (tối thiểu là 6 ký tự)
+              blank: không thể để trống
+  sign_up_success: Đăng kí thành công.
+  sign_up_fail: Đăng kí thất bại.
+  you_need_to_signup: Bạn cần phải đăng nhập lại
+  no_user_found: Không tìm thấy người dùng phù hợp
+  user_not_found: Không tìm thấy người dùng
+  users:
+    new:
+      sign_up: Đăng ký
+      first_name: Họ
+      last_name: Tên
+      email: Email
+      birthday: Ngày sinh
+      password: Mật khẩu
+      password_confirm: Mật khẩu, lần nữa...
+      create_my_acc: Tạo tài khoản
+  shared:
+    error_messages:
+      the_form_contain: Form đang có
+      error: lỗi
