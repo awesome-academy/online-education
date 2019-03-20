@@ -32,11 +32,19 @@
   <div class="container main-menu">
     <div class="row align-items-center justify-content-between d-flex">
       <div id="logo">
-        <%= link_to "index.html" do %><%= image_tag("logo.png") %><% end %>
+        <%= link_to root_path do %><%= image_tag("logo.png") %><% end %>
+      </div>
+      <div>
+        <%= form_with scope: :search do |f| %>
+          <%= f.text_field :name, placeholder: t(".search"), type: "email" %>
+          <%= button_tag class: "btn btn-default genric-btn primary" do %>
+            <span class="lnr lnr-magnifier"></span>
+          <% end %>
+          <div class="info"></div>
+        <% end %>
       </div>
       <nav id="nav-menu-container">
         <ul class="nav-menu">
-          <%= link_to "" do %> <% end %>
           <li><%= link_to t(".home"),"index_path" %></li>
           <li><%= link_to t(".about"), "about_path" %></li>
           <li><%= link_to t(".recruitment"),"recruitment_path" %></li>

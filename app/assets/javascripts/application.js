@@ -15,4 +15,5 @@
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
+//= require plyr
 //= require_tree .

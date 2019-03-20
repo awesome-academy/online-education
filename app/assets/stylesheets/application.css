@@ -9,6 +9,7 @@
  *= require owl.carousel.css
  *= require jquery-ui.css
  *= require main.css
+ *= require plyr
  *= require_tree .
  *= require_self
  */

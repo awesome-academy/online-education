@@ -3,3 +3,4 @@ max_first_name: 225
 max_last_name: 225
 max_password: 225
 min_password: 6
+string_max: 250

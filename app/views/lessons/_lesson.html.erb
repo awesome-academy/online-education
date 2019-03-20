@@ -1,0 +1,22 @@
+<div class="row lessons">
+  <div class="col col-xl-4 col-lg-12 col-md-12 col-sm-12 col-12">
+    <h6>
+      <%= lesson.name %>
+    <h6>
+  </div>
+
+  <div class="col col-xl-4 col-lg-12 col-md-12 col-sm-12 col-12">
+    <h6>
+      <%= lesson.video_url %>
+    <h6>
+  </div>
+
+  <div class="col col-xl-4 col-lg-12 col-md-12 col-sm-12 col-12" >
+    <%= link_to t(".edit"), "#",
+      class: "text-uppercase genric-btn primary btn btn-default" %>
+    <%= link_to t(".delete"), "#",
+      class: "text-uppercase genric-btn primary btn btn-default" %>
+    <%= link_to t(".write_test"), "#",
+    class: "text-uppercase genric-btn primary btn btn-default" %>
+  </div>
+</div>
