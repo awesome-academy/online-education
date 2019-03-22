@@ -2,12 +2,7 @@ module AuthorizationHelper
   def current_user
     token = cookies[:token]
     decoded = JsonWebToken.decode token
-
-    if decoded.present?
-      user = User.find_by id: decoded[:user_id]
-    else
-      user = nil
-    end
+    decoded.present? ? User.find_by(id: decoded[:user_id]) : nil
   end
 
   def login user

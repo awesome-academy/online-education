@@ -1,6 +1,7 @@
 en:
   layouts:
     header:
+      search: Search
       home: Home
       about: About
       recruitment: Recruitment
@@ -29,22 +30,29 @@ en:
             password:
               too_short: is too short (minimum is 6 characters)
               blank: can't be blank
-  sign_up_success: Signup success!
-  you_need_to_signup: You need to sign up
-  sign_up_fail: Signup fail!
-  no_user_found: No user found
-  user_not_found: user not found!
+  users:
+    create:
+      sign_up_success: Signup success!
+      you_need_to_signup: You need to sign up
   users:
     new:
-      sign_up: Sign up
       first_name: First Name
       last_name: Last Name
       email: Email
       birthday: Birthday
       password: Password
-      password_confirm: Password, again...
+      password_confirm: Password confirmation
       create_my_acc: Create my account
+      must_have: Must have
   shared:
     error_messages:
       the_form_contain: The form contains
       error: errors
+  jwt:
+    login_success: Login success
+    login_fail: Invalid email/password combination
+    new:
+      email_address: Email address
+      password: Password
+      login: Đăng nhập
+      remember_me: Đăng nhập
