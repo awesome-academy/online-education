@@ -45,3 +45,8 @@ group :test do
   gem "database_cleaner"
   gem "shoulda-matchers", "~> 3.1"
 end
+
+group :production do
+  gem "pg"
+  gem "rails_12factor"
+end
