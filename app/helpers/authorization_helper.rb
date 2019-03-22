@@ -14,7 +14,16 @@ module AuthorizationHelper
     redirect_to root_path if logged_in?
   end
 
+  def check_user
+    redirect_to root_path unless logged_in?
+  end
+
   def logged_in?
     current_user.present?
+  end
+
+  def logout
+    cookies.delete :token
+    @current_user = nil
   end
 end

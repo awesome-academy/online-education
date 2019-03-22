@@ -15,6 +15,7 @@ en:
       signup: Signup
       logged_in_as: "User "
       course: Course
+      logout: Logout
   activerecord:
     errors:
       models:
@@ -31,10 +32,9 @@ en:
               too_short: is too short (minimum is 6 characters)
               blank: can't be blank
   users:
-    create:
-      sign_up_success: Signup success!
-      you_need_to_signup: You need to sign up
-  users:
+    sign_up_success: Signup success!
+    you_need_to_signup: You need to sign up
+    logout_success: Log out sucess
     new:
       first_name: First Name
       last_name: Last Name
@@ -54,5 +54,5 @@ en:
     new:
       email_address: Email address
       password: Password
-      login: Đăng nhập
-      remember_me: Đăng nhập
+      login: Log in
+      remember_me: Remember me
