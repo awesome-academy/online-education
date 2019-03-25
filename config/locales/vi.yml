@@ -16,6 +16,7 @@ vi:
       logged_in_as: "Người dùng "
       course: Khóa học
       logout: Đăng xuất
+      search: Tìm kiếm
   number:
     currency:
       format:
@@ -31,7 +32,7 @@ vi:
           attributes:
             email:
               blank: không thể để trống
-              invalid: không hợp lệ              
+              invalid: không hợp lệ
             first_name:
               blank: không thể để trống
             last_name:
@@ -46,6 +47,9 @@ vi:
     sign_up_success: Đăng kí thành công.
     sign_up_fail: Đăng kí thất bại.
     logout_success: Đăng xuất thành công
+    create:
+      sign_up_success: Đăng kí thành công.
+      sign_up_fail: Đăng kí thất bại.
     new:
       sign_up: Đăng ký
       first_name: Họ
@@ -98,3 +102,38 @@ vi:
       add_to_cart: Thêm vào giỏ hàng
       close: Đóng
   free: Miễn phí
+  questions:
+    new:
+      add_question: Thêm câu hỏi
+      create_new_question_for_test: Tạo câu hỏi mới cho bài kiểm tra
+      create_answer_for_question: Thêm câu trả lời cho câu hỏi
+      add_answer: Thêm câu trả lời
+      questions_list: Danh sách câu hỏi đã thêm
+      add_test_question: Thêm câu hỏi cho test
+      wrong_trainer: Bạn không phải giáo viên của khóa học này
+    answer_fields:
+      is_correct: Là câu trả lời đúng
+      remove_answer: Bỏ câu trả lời
+    question:
+      edit: Sửa
+      delete: Xóa
+    create:
+      question_created: Câu hỏi đã được tạo
+      create_question_fail: Tạo câu hỏi mới thất bại
+      create_test_fail: Tạo bài kiểm tra mới thất bại
+  lessons:
+    new:
+      add_lesson: Thêm bài học
+      enter_lesson_name: Nhập tên bài học ở đây
+      enter_video_url: Nhập đường dẫn video bài học ở đây
+      add_lessons_to_course: Thêm các bài học cho khóa
+      lessons_list: Danh sách bài học
+      add_course_lessons: Thêm bài học cho khóa học
+      wrong_trainer: Bạn không phải giáo viên của khóa học này
+    lesson:
+      edit: Sửa
+      delete: Xóa
+      write_test: Viết test
+    create:
+      create_lesson_fail: Tạo bài học mới thất bại
+      course_not_found: Không tìm thấy khóa học

@@ -1,0 +1,58 @@
+<% provide :title, t(".add_test_question") %>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12 left-contents" >
+      <%= form_for [:lesson, @question] do |f| %>
+        <div class="row">
+          <div class="col col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+            <h3 class="h3-title">
+              <%= t ".create_new_question_for_test" %>
+            </h3>
+          </div>
+
+          <div class="col col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+            <div>
+              <%= f.cktext_area :content, class: "ckeditor" %>
+            </div>
+          </div>
+
+          <div class="col col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+            <h4 class="h3-title">
+              <%= t ".create_answer_for_question" %>
+            </h4>
+          </div>
+
+          <div class="col col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+            <%= f.fields_for :answers do |answer| %>
+              <%= render "questions/answer_fields", f: answer %>
+            <% end %>
+          </div>
+
+          <div class="col col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12
+            add_button">
+            <div class="text-uppercase genric-btn primary btn btn-default
+              add_button">
+              <%= link_to_add_association t(".add_answer"), f, :answers,
+              class: "text_white" %>
+            </div>
+          </div>
+
+          <div class="col col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+            <%= f.submit t(".add_question"),
+              class: "text-uppercase genric-btn primary btn btn-default" %>
+          </div>
+        </div>
+      <% end %>
+
+      <div class="col col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+        <h3 class="h3-title">
+          <%= t ".questions_list" %>
+        </h3>
+      </div>
+    </div>
+  </div>
+
+  <div id="show_questions">
+    <%= render @list_questions %>
+  </div>
+</div>

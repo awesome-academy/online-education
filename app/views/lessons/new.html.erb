@@ -1,47 +1,49 @@
 <% provide :title, t(".add_course_lessons") %>
-<section class="course-details-area pt-120">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12 left-contents" >
-        <%= form_with model: [:course, @lessons] do |f| %>
-          <div class="row">
-            <div class="col col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-              <h3 class="h3-title">
-                <%= t ".add_lessons_to_course" %>
-              </h3>
-            </div>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12 left-contents" >
+      <%= form_with model: [:course, @lessons] do |f| %>
+        <div class="row">
+          <div class="col col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+            <h3 class="h3-title">
+              <%= t ".add_lessons_to_course" %>
+            </h3>
+          </div>
 
-            <div class="col col-xl-4 col-lg-12 col-md-12 col-sm-12 col-12">
-              <div>
-                <%= f.text_field :name, class: "form-control",
-                  placeholder: t(".enter_lesson_name") %>
-              </div>
-            </div>
-
-            <div class="col col-xl-4 col-lg-12 col-md-12 col-sm-12 col-12">
-              <div>
-                <%= f.text_field :video_url, class: "form-control",
-                  placeholder: t(".enter_video_url") %>
-              </div>
-            </div>
-
-            <div class="col col-xl-4 col-lg-12 col-md-12 col-sm-12 col-12">
-              <%= f.submit t(".add_lesson"),
-                class: "text-uppercase genric-btn primary btn btn-default" %>
+          <div class="col col-xl-4 col-lg-12 col-md-12 col-sm-12 col-12">
+            <div>
+              <%= f.label :name, t(".name") %>
+              <%= f.text_field :name, class: "form-control",
+                placeholder: t(".enter_lesson_name") %>
             </div>
           </div>
-        <% end %>
 
-        <div class="col col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-          <h3 class="h3-title">
-            <%= t ".lessons_list" %>
-          </h3>
+          <div class="col col-xl-4 col-lg-12 col-md-12 col-sm-12 col-12">
+            <div>
+              <%= f.label :video_url, t(".video_url") %>
+              <%= f.text_field :video_url, class: "form-control",
+                placeholder: t(".enter_video_url") %>
+            </div>
+          </div>
+
+          <div class="col col-xl-4 col-lg-12 col-md-12 col-sm-12 col-12">
+
+            <%= f.submit t(".add_lesson"),
+              class: "text-uppercase genric-btn primary btn btn-default
+              submit_button" %>
+          </div>
         </div>
+      <% end %>
+
+      <div class="col col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+        <h3 class="h3-title">
+          <%= t ".lessons_list" %>
+        </h3>
       </div>
     </div>
-
-    <div id="show_lessons">
-      <%= render @list_lessons %>
-    </div>
   </div>
-</section>
+
+  <div id="show_lessons">
+    <%= render @list_lessons %>
+  </div>
+</div>
