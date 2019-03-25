@@ -1,0 +1,69 @@
+<% provide :title, t(".course_detail") %>
+<section class="course-details-area pt-120">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-lg-8 left-contents">
+        <div class="main-image">
+          <%= image_tag "s-bg", class: "img-course-detail" %>
+        </div>
+        <div class="jq-tab-wrapper horizontal-tab" id="horizontalTab">
+        <div class="jq-tab-menu">
+          <div class="jq-tab-title active" data-tab="1">
+            <%= t ".description" %>
+          </div>
+          <div class="jq-tab-title" data-tab="2">
+            <%= t ".teacher" %>
+          </div>
+          <div class="jq-tab-title" data-tab="3">
+            <%= t ".lessons" %>
+          </div>
+          <div class="jq-tab-title" data-tab="4">
+            <%= t ".comments" %>
+          </div>
+        </div>
+        <div class="jq-tab-content-wrapper">
+          <div class="jq-tab-content active" data-tab="1">
+            <%= @course.description %>
+          </div>
+          <div class="jq-tab-content" data-tab="2">
+            <%= @course.trainer.description %>
+          </div>
+          <div class="jq-tab-content" data-tab="3">
+            <%= render "shops/lesson_outline" %>
+          </div>
+        </div>
+        <div class="jq-tab-content comment-wrap" data-tab="4">
+          <%= render "shops/facebook_comment" %>
+        </div>
+      </div>
+      </div>
+      <div class="col-md-4 col-lg-4 right-contents">
+        <ul>
+          <li>
+            <a class="justify-content-between d-flex" href="#">
+              <p><%= t ".trainer_name" %> </p> 
+              <span class="or">
+                <%= @course.trainer.last_name %>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a class="justify-content-between d-flex" href="#">
+              <p><%= t ".course_fee" %> </p>
+              <span>$<%= @course.price %></span>
+            </a>
+          </li>
+          <li>
+            <a class="justify-content-between d-flex" href="#">
+              <p><%= t ".duration" %> </p>
+              <span><%= @course.duration %></span>
+            </a>
+          </li>
+        </ul>
+        <%= link_to t(".add_to_cart"), "#",
+          class: "primary-btn text-uppercase" %>
+      </div>
+    </div>
+  </div>	
+</section>
+<%= render "shops/modal.html" %>

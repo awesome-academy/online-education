@@ -1,0 +1,14 @@
+<ul class="course-list">
+  <% if @course.lessons.present? %>
+    <% @course.lessons.each do |l| %>
+      <li class="justify-content-between d-flex">
+        <p><%= l.name %></p>
+        <%= link_to t(".view_details"), "#", 
+          class: "primary-btn text-uppercase",
+          data: {toggle: "modal", target: "#myModal"} %>
+      </li>
+    <% end %>
+  <% else %>
+    <p><%= t ".dont_have_any_lesson" %></p>
+  <% end %>      
+</ul>
