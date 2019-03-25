@@ -45,6 +45,17 @@
           </ul>
         </div>
       </div>
+      <div class="col-lg-2 col-md-6 col-sm-6">
+        <div class="single-footer-widget">
+          <div id="nav">
+            <h4><%= t ".languages" %></h4>
+            <%= link_to_unless_current image_tag("en.png",
+              size: Settings.i18n.picture), locale: "en" %> | 
+            <%= link_to_unless_current image_tag("vi.png",
+              size: Settings.i18n.picture), locale: "vi" %>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="footer-bottom row align-items-center justify-content-between">
       <p class="footer-text m-0 col-lg-6 col-md-12">

@@ -16,6 +16,14 @@ en:
       logged_in_as: "User "
       course: Course
       logout: Logout
+  number:
+    currency:
+      format:
+        unit: "$"
+        delimiter: ","
+        separator: "."
+        precision: 2
+        format: "%u%n"
   activerecord:
     errors:
       models:
@@ -31,9 +39,12 @@ en:
             password:
               too_short: is too short (minimum is 6 characters)
               blank: can't be blank
+  pages:
+    index:
+      home: Home
   users:
     sign_up_success: Signup success!
-    you_need_to_signup: You need to sign up
+    sign_up_fail: Signup fail!    
     logout_success: Log out sucess
     new:
       first_name: First Name
@@ -56,3 +67,9 @@ en:
       password: Password
       login: Log in
       remember_me: Remember me
+  shops:
+    index:
+      shop: Shop
+      popular_course: Popular Courses we offer
+      quote: There is a moment in the life of any aspiring.
+  free: Free

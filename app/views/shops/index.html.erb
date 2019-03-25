@@ -1,0 +1,49 @@
+<% provide :title, t(".shop") %>
+<section class="popular-courses-area section-gap courses-page">
+  <div class="container">
+    <div class="row d-flex justify-content-center">
+      <div class="menu-content pb-70 col-lg-8">
+        <div class="title text-center">
+          <h1 class="mb-10"><%= t ".popular_course" %></h1>
+          <p><%= t ".quote" %></p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <% @courses.each do |c| %>
+        <div class="single-popular-carusel col-lg-3 col-md-6" >
+          <div class="thumb-wrap relative fix-it">
+            <div class="thumb relative">
+              <div class="overlay overlay-bg"></div>
+              <%= link_to image_tag("b1"), "#" %>
+            </div>
+            <div class="meta d-flex">
+              <p>
+                <span class="lnr lnr-users"></span> 
+                <span class="lnr lnr-bubble"></span>
+              </p>
+              <h4 class="price">
+                <%= change_currency_on params[:locale], c.price %>
+              </h4>
+            </div>
+          </div>
+          <div class="details">
+            <a href="course-details.html">
+              <h4>
+                <%= link_to "#" do %>
+                  <% truncate c.name, length: Settings.trcate_name %>
+                <% end %>
+              </h4>
+            </a>
+            <p>
+              <%= truncate c.description, length: Settings.trcate_text %>
+            </p>
+          </div>
+        </div>
+      <% end %>
+    </div>
+    <div class="kaminari">
+      <%= paginate @courses, theme: "twitter-bootstrap-4" %>
+    </div>
+  </div>
+</section>

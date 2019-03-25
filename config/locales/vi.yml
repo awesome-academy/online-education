@@ -16,6 +16,14 @@ vi:
       logged_in_as: "Người dùng "
       course: Khóa học
       logout: Đăng xuất
+  number:
+    currency:
+      format:
+        unit: "đ"
+        delimiter: ","
+        separator: "."
+        precision: 0
+        format: "%n%u"
   activerecord:
     errors:
       models:
@@ -31,6 +39,9 @@ vi:
             password:
               too_short: quá ngắn (tối thiểu là 6 ký tự)
               blank: không thể để trống
+  pages:
+    index:
+      home: Trang chủ
   users:
     sign_up_success: Đăng kí thành công.
     sign_up_fail: Đăng kí thất bại.
@@ -58,3 +69,9 @@ vi:
       password: Mật khẩu
       login: Đăng nhập
       remember_me: Ghi nhớ tôi
+  shops:
+    index:
+      shop: Cửa hàng
+      popular_course: Những khóa học khuyên dùng
+      quote: Có một khoảnh khắc trong cuộc sống của bất kỳ tham vọng...
+  free: Miễn phí
