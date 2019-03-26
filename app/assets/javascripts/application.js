@@ -12,6 +12,7 @@
 //= require main.js
 //= require ckeditor/init
 //= require ckeditor/config
+//= require cocoon
 //= require rails-ujs
 //= require activestorage
 //= require plyr
