@@ -101,6 +101,18 @@ vi:
       need_an_account: Bạn sẽ cần một tài khoản để sở hữu những khóa học này
       add_to_cart: Thêm vào giỏ hàng
       close: Đóng
+  purchased_courses:
+    destroy_sucess: Xóa thành công
+    destroy_fail: Xóa thất bại
+    no_course: Khóa học này không tồn tại
+    index:
+      course: Khóa học của bạn
+      available_course_of: Những khóa học đã mua của
+    list_user_course:
+      you_dont_have_any_course: Bạn không có khóa học nào
+      are_you_sure: "Bạn có chắc chắn muốn xóa bài viết? Nếu bạn xóa khóa học 
+      này, bạn sẽ không thể  học khóa học này nữa!"
+      buy_some_course: Mua khóa học?
   free: Miễn phí
   questions:
     new:

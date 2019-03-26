@@ -1,0 +1,39 @@
+<% if @pur_courses.present? %>
+  <% @pur_courses.each do |pur_course| %>
+    <div class="row">
+      <div class="col-12 col-sm-12 col-md-2 text-center">
+        <%= link_to image_tag("b1", class: "img-course"), "#" %>
+      </div>
+      <div class="col-12 text-sm-center col-sm-12 text-md-left col-md-6">
+        <h4 class="product-name"><strong>
+          <%= link_to "#" do %>
+            <%= truncate pur_course.course.name,
+              length: Settings.trcate_text %>
+          <% end %>
+        </strong></h4>
+        <h4>
+          <small><%= truncate pur_course.course.description,
+            length: Settings.trcate_text %></small>
+        </h4>
+      </div>
+      <div class="col-12 col-sm-12 text-sm-center col-md-4 text-md-right row">
+        <div class="col-3 col-sm-3 col-md-10 text-md-right timestamp">
+          <h6><strong>
+            <%= l pur_course.created_at, format: :long %>
+          </strong></h6>
+        </div>
+        <div class="col-2 col-sm-2 col-md-2 text-right">
+          <%= link_to purchased_course_path(pur_course.course), method: :delete,
+            data: {confirm: t(".are_you_sure")},
+            class: "btn btn-outline-danger btn-xs" do %>
+            <i class="fa fa-trash" aria-hidden="true"></i>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <hr>
+  <% end %>
+<% else %>
+  <p><%= t ".you_dont_have_any_course" %></p>
+  <%= link_to t(".buy_some_course"), shops_path %>
+<% end %>

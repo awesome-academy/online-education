@@ -70,11 +70,10 @@
                 <li>
                   <%= link_to t(".settings"), "#" %>
                 </li>
-                <% if current_user.trainee? %>
-                  <li>
-                    <%= link_to t(".owned_course"), "#" %>
-                  </li>
-                <% elsif current_user.trainer? %>
+                <li>
+                  <%= link_to t(".owned_course"), purchased_courses_path %>
+                </li>
+                <% if current_user.trainer? %>
                   <li>
                     <%= link_to t(".teaching_course"), "#" %>
                   </li>

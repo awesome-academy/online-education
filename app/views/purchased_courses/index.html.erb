@@ -1,0 +1,16 @@
+<% provide :title, t(".course") %>
+<div class="container">
+  <div class="card shopping-cart">
+    <div class="card-header bg-dark text-light">
+      <%= t ".available_course_of" %>: <%= current_user.last_name %>
+      <div class="clearfix"></div>
+    </div>
+    <div class="card-body">
+      <%= render "purchased_courses/list_user_course" %>
+    </div>
+  </div>
+  <br>
+  <div class="kaminari">
+    <%= paginate @pur_courses, theme: "twitter-bootstrap-4" %>
+  </div>
+</div>

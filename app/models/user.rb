@@ -19,7 +19,7 @@ class User < ApplicationRecord
   validates :last_name, presence: true,
     length: {maximum: Settings.max_last_name}
   validates :password, allow_nil: true,
-    length: {minimum: Settings.min_password}
+    length: {minimum: Settings.min_password, maximum: Settings.max_password}
 
   has_secure_password
 
