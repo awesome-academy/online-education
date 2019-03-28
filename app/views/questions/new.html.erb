@@ -3,6 +3,7 @@
   <div class="row">
     <div class="col-lg-12 left-contents" >
       <%= form_for [:lesson, @question] do |f| %>
+        <%= render "shared/error_messages", object: f.object %>
         <div class="row">
           <div class="col col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
             <h3 class="h3-title">

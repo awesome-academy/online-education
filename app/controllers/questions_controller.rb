@@ -41,8 +41,8 @@ class QuestionsController < ApplicationController
     @question = Question.find_by id: params[:id]
 
     return if @question
-    flash.now[:danger] = t ".question_not_found"
-    render :new
+    flash[:danger] = t ".question_not_found"
+    redirect_to new_lesson_question_path @test.lesson
   end
 
   def list_questions

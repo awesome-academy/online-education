@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_26_064530) do
+ActiveRecord::Schema.define(version: 2019_03_27_031450) do
 
   create_table "answers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "question_id"
@@ -56,6 +56,8 @@ ActiveRecord::Schema.define(version: 2019_03_26_064530) do
     t.string "overview_video_url"
     t.integer "price"
     t.string "duration"
+    t.integer "course_status"
+    t.text "employment_conditions"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

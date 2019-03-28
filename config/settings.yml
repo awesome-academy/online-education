@@ -15,3 +15,5 @@ lessons_per_page: 5
 en: en
 i18n:
   picture: "56x50"
+page_limit: 8
+text_length: 135

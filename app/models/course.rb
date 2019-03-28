@@ -10,4 +10,8 @@ class Course < ApplicationRecord
     foreign_key: :user_id, optional: true
 
   validates :description, length: {maximum: Settings.text_max}
+
+  enum course_status: {recruiting: 0, building: 1, complete: 2}
+
+  scope :course_in_recruitment, ->{where course_status: :recruiting}
 end

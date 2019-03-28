@@ -1,0 +1,23 @@
+<div class="col-lg-6 pb-30">
+  <div class="single-carusel row align-items-center">
+    <div class="col-12 col-md-6 thumb">
+      <%= image_tag "e1.jpg", class: "img-fluid" %>
+    </div>
+    <div class="details col-12 col-md-6">
+      <%= link_to new_course_trainer_candidate_path(course.id) do %>
+        <h4>
+          <%= truncate course.name, length: Settings.trcate_name %>
+        </h4>
+      <% end %>
+      <p>
+        <%= truncate course.employment_conditions,
+          length: Settings.text_length %>
+      </p>
+      <div class="text-uppercase genric-btn primary btn btn-default
+        add_button">
+        <%= link_to t(".apply"), new_course_trainer_candidate_path(course.id),
+          class: "text_white" %>
+      </div>
+    </div>
+  </div>
+</div>

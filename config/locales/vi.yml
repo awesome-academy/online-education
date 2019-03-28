@@ -1,4 +1,6 @@
 vi:
+  cant_apply_twice: Bạn đã đăng ký làm giáo viên của khóa học này rồi
+
   views:
     pagination:
       first: "« ĐẦU"
@@ -117,7 +119,7 @@ vi:
       available_course_of: Những khóa học đã mua của
     list_user_course:
       you_dont_have_any_course: Bạn không có khóa học nào
-      are_you_sure: "Bạn có chắc chắn muốn xóa bài viết? Nếu bạn xóa khóa học 
+      are_you_sure: "Bạn có chắc chắn muốn xóa bài viết? Nếu bạn xóa khóa học
       này, bạn sẽ không thể  học khóa học này nữa!"
       buy_some_course: Mua khóa học?
   free: Miễn phí
@@ -157,12 +159,14 @@ vi:
       create_lesson_fail: Tạo bài học mới thất bại
       course_not_found: Không tìm thấy khóa học
   courses:
-    course_doesnt_exist_anymore: "Chúng tôi xin lỗi nhưng khóa học 
+    course_doesnt_exist_anymore: "Chúng tôi xin lỗi nhưng khóa học
       này không còn nữa"
     show:
       lesson: Bài học
     list_lessons:
       dont_have_any_lesson: Bạn không có bài học nào
+    course:
+      apply: Ứng tuyển
   carts:
     index:
       checkout: Mua
@@ -177,3 +181,16 @@ vi:
       default: "%a, %d %m %Y %H:%M:%S %z"
       long: "%d - %m - %Y %H:%M"
       short: "%d - %m - %H:%M"
+  trainer_candidates:
+    new:
+      apply_to_course: Ứng tuyển vào khóa học
+      course_info: Thông tin khóa học
+      introduce: Giới thiệu bản thân
+      cv_url: Đường dẫn CV
+      write_about_you: Viết vài điều về bạn ở đây
+      enter_cv_url: Nhập đường dẫn CV ở đây
+      apply: Ứng tuyển
+      employment_conditions: Điều kiện tuyển dụng
+      description: Miêu tả
+    index:
+      course_recruiting: Các khóa học đang tuyển dụng
