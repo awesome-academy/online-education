@@ -50,7 +50,9 @@
           <li>
             <a class="justify-content-between d-flex" href="#">
               <p><%= t ".course_fee" %> </p>
-              <span>$<%= @course.price %></span>
+              <span>
+                <%= change_currency_on params[:locale], @course.price %>
+              </span>
             </a>
           </li>
           <li>
@@ -60,7 +62,7 @@
             </a>
           </li>
         </ul>
-        <%= link_to t(".add_to_cart"), "#",
+        <%= link_to t(".add_to_cart"), shop_carts_path(@course), method: :post,
           class: "primary-btn text-uppercase" %>
       </div>
     </div>

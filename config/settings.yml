@@ -6,10 +6,12 @@ min_password: 6
 string_max: 250
 trcate_text: 100
 trcate_name: 40
+des_max: 180
 currency: 20_000
 text_max: 20_000
 limit: 8
 course_per_page: 5
 lessons_per_page: 5
+en: en
 i18n:
   picture: "56x50"
