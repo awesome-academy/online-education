@@ -1,19 +1,19 @@
 <% if @cart.present? %>
-  <% @cart.each do |product| %>
+  <% @cart.each do |course| %>
     <div class="row">
       <div class="col-12 col-sm-12 col-md-2 text-center">
-        <% link_to shop_path product do %>
+        <% link_to shop_path course do %>
           <%= image_tag "b1", class: "img-course" %>
         <% end %>
       </div>
       <div class="col-12 text-sm-center col-sm-12 text-md-left col-md-6">
         <h4 class="product-name">
           <strong>
-            <%= truncate product.name, length: Settings.trcate_text %>
+            <%= truncate course.name, length: Settings.trcate_text %>
           </strong>
         </h4>
         <h4>
-          <small><%= truncate product.description,
+          <small><%= truncate course.description,
             length: Settings.des_max %></small>
         </h4>
       </div>
@@ -22,13 +22,13 @@
         <div class="col-4 col-sm-4 col-md-10 cost">
           <h6>
             <strong>
-              <%= change_currency_on params[:locale], product.price %> 
+              <%= change_currency_on params[:locale], course.price %> 
               <i class="fa fa-tags"></i>
             </strong>
           </h6>
         </div>
         <div class="col-2 col-sm-2 col-md-2 text-right">
-        <%= link_to shop_cart_path(id: product.id),
+        <%= link_to cart_path(course),
           method: :delete, remote: true,
           class: "btn btn-outline-danger btn-xs" do %>
           <i class="fa fa-trash" aria-hidden="true"></i>

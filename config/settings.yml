@@ -8,6 +8,7 @@ trcate_text: 100
 text_length: 135
 currency: 20_000
 text_max: 20_000
+size: "263x180"
 min_password: 6
 string_max: 250
 trcate_name: 40
@@ -17,5 +18,6 @@ condition: "1"
 des_max: 180
 limit: 8
 en: en
+vi: vi
 i18n:
   picture: "56x50"
