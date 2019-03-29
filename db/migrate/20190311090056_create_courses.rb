@@ -7,6 +7,8 @@ class CreateCourses < ActiveRecord::Migration[5.2]
       t.string :overview_video_url
       t.integer :price
       t.string :duration
+      t.integer :course_status
+      t.text :employment_conditions
 
       t.timestamps
     end

@@ -185,3 +185,34 @@ en:
       apply: Apply
     index:
       course_recruiting: Recruiting courses
+  course:
+    course_status:
+      recruiting: Recruiting
+      building: Building
+      complete: Complete
+
+  admin:
+    courses:
+      new:
+        create_course: Create course
+        create_new_course: Create new course
+        name: Name
+        overview_video_url: Overview video url
+        enter_course_name: Enter course name here
+        enter_overview_video_url: Enter overview video url here
+        price: Price
+        duration: Duration
+        status: Status
+        trainer: Trainer
+        enter_price: Enter course price here
+        enter_duration: Enter course duration here
+        choose_trainer: Please choose trainer
+        choose_status: Please choose course status
+        tag: Tag (use button ',' to create new tag)
+        description: Description
+        employment_conditions: Employment Conditions
+        add_course: Add course
+      create:
+        course_created: Course created
+        assign_tag_fail: Assign tag to course failed
+        create_tag_fail: Create new tag for course failed

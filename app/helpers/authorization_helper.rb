@@ -15,7 +15,9 @@ module AuthorizationHelper
   end
 
   def check_user
-    redirect_to root_path unless logged_in?
+    return if logged_in?
+    flash[:danger] = t ".re_login"
+    redirect_to root_path
   end
 
   def logged_in?

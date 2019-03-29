@@ -21,5 +21,10 @@ Rails.application.routes.draw do
     resources :shops, only: %i(index show) do
       resources :carts, only: %i(index create destroy)
     end
+    resources :trainer_candidates, only: %i(index)
+
+    namespace :admin do
+      resources :courses, only: %i(index new create)
+    end
   end
 end
