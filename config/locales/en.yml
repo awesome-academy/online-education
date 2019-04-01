@@ -57,6 +57,7 @@ en:
     sign_up_fail: Signup fail!
     logout_success: Log out sucess
     new:
+      sign_up: Sign up
       first_name: First Name
       last_name: Last Name
       email: Email
@@ -137,6 +138,7 @@ en:
       create_question_fail: Create new question failed
       create_test_fail: Create new test failed
   lessons:
+    lesson_doesnt_exist: This lesson doesn't exist anymore
     new:
       add_lesson: Add lesson
       enter_lesson_name: Enter lesson name here
@@ -152,6 +154,9 @@ en:
     create:
       create_lesson_fail: Create new lesson failed
       course_not_found: Course not found
+    test_sheet:
+      submit: Submit
+      we_dont_have_any_questions_for_now: We dont have any questions for now
   courses:
     course_doesnt_exist_anymore: We sorry but this course doesn't exist anymore
     show:
@@ -162,9 +167,9 @@ en:
       apply: Apply
   carts:
     index:
-        checkout: Checkout
-        continue_shopping: Continue shopping
-        shipping_cart: Shipping cart
+      checkout: Checkout
+      continue_shopping: Continue shopping
+      shipping_cart: Shipping cart
     cart:
       you_dont_have_any_course: You don't have any course
     total_cost:
@@ -174,6 +179,8 @@ en:
       default: "%a, %d %b %Y %H:%M:%S %z"
       long: "%B %d, %Y %H:%M"
       short: "%d %b %H:%M"
+  test_results:
+    your_score: Your score 
   trainer_candidates:
     new:
       apply_to_course: Apply to course

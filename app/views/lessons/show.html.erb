@@ -1,0 +1,7 @@
+<% if @lesson %>
+  <% provide :title, @lesson.name %>
+  <h3><b><p><%= @lesson.name %></p></b></h3>
+  <div><%= @lesson.video_url.html_safe %></div>
+<% end %>
+<br><br><br>
+<%= render "lessons/test_sheet" %>

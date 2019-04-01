@@ -5,9 +5,10 @@ class JwtController < ApplicationController
 
   def create
     user = User.find_by email: login_params[:email].downcase
+    remember_me = login_params[:remember_me]
 
     if user && user.authenticate(login_params[:password])
-      login user
+      login user, remember_me
       flash[:success] = t ".login_success"
       redirect_to user
     else
@@ -19,6 +20,6 @@ class JwtController < ApplicationController
   private
 
   def login_params
-    params.require(:login).permit :email, :password
+    params.require(:login).permit :email, :password, :remember_me
   end
 end

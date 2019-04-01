@@ -56,10 +56,10 @@ ActiveRecord::Schema.define(version: 2019_03_27_031450) do
     t.string "overview_video_url"
     t.integer "price"
     t.string "duration"
-    t.integer "course_status"
-    t.text "employment_conditions"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "course_status"
+    t.text "employment_conditions"
   end
 
   create_table "lessons", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|

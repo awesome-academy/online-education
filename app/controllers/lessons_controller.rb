@@ -1,6 +1,7 @@
 class LessonsController < ApplicationController
   before_action :search_course, only: %i(new create)
   before_action :list_lessons, only: %i(new)
+  before_action :current_lesson, only: %i(show)
 
   def new
     @lessons = Lesson.new
@@ -18,6 +19,10 @@ class LessonsController < ApplicationController
     else
       flash.now[:danger] = t ".create_lesson_fail"
     end
+  end
+
+  def show
+    @questions = @lesson.test.questions.includes :answers
   end
 
   private
@@ -39,6 +44,12 @@ class LessonsController < ApplicationController
     else
       flash[:danger] = t ".course_not_found"
     end
+    redirect_to root_path
+  end
+
+  def current_lesson
+    return if @lesson = Lesson.find_by(id: params[:id])
+    flash[:danger] = t ".lesson_doesnt_exist"
     redirect_to root_path
   end
 end
