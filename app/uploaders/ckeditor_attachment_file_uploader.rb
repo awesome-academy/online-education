@@ -6,7 +6,7 @@ class CkeditorAttachmentFileUploader < CarrierWave::Uploader::Base
   storage :file
 
   def store_dir
-    "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{@user.id}"
+    "#{Rails.root}/tmp/uploads"
   end
 
   def extension_white_list
