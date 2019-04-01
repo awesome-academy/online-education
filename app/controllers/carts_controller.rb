@@ -4,8 +4,8 @@ class CartsController < ApplicationController
   def index; end
 
   def create
-    add_product params[:shop_id]
-    redirect_to shop_carts_path
+    add_product params[:course_id]
+    redirect_to carts_path
   end
 
   def destroy
@@ -17,6 +17,7 @@ class CartsController < ApplicationController
   private
 
   def refresh_cart
+    add_product params[:id] unless session[:cart]
     @cart = Array.new
     session[:cart].each do |product|
       @cart << Course.find_by(id: product) if product

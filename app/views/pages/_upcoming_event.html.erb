@@ -1,0 +1,29 @@
+<section class="upcoming-event-area section-gap">
+  <div class="container">
+    <div class="row d-flex justify-content-center">
+      <div class="menu-content pb-70 col-lg-8">
+        <div class="title text-center">
+          <h1 class="mb-10"><%= t ".upcoming" %></h1>
+          <p><%= t ".serious_astronomy" %></p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="active-upcoming-event-carusel">
+        <% 6.times do  %>
+          <div class="single-carusel row align-items-center">
+            <div class="col-12 col-md-6 thumb">
+              <%= image_tag "b3", size: Settings.size %>
+            </div>
+            <div class="detials col-12 col-md-6">
+              <a href="#"><h4><%= t ".child_through" %></h4></a>
+              <p>
+                <%= t ".lorem_ipsum" %>
+              </p>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</section>

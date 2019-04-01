@@ -52,6 +52,27 @@ en:
   pages:
     index:
       home: Home
+    popular_course:
+      popular_course: Popular Courses we offer
+      momment_of_life: There is a moment in the life of any aspiring.
+      learn_design: Learn Designing
+      content: "When television was young, there was a hugely popular show 
+        based on the still popular fictional characte"
+      sorry: Sorry, we don't have any courses for you now
+    upcoming_event:
+      child_through: The Universe Through A Child S Eyes
+      lorem_ipsum: "For most of us, the idea of astronomy is something we 
+        directly connect to “stargazing”, telescopes and seeing magnificent 
+        displays in the heavens."
+      upcoming: Upcoming Events of our Institute
+      serious_astronomy: If you are a serious astronomy fanatic like a lot of us
+    cta_one:
+      apply_for_the_post: Apply for the post
+      instructor: Become an instructor
+      instructor_context: "There is a moment in the life of any aspiring 
+        astronomer that it is time to buy that first telescope. It’s exciting 
+        to think about setting up your own viewing station whether that is on 
+        the deck."
   users:
     sign_up_success: Signup success!
     sign_up_fail: Signup fail!
@@ -83,6 +104,7 @@ en:
       shop: Shop
       popular_course: Popular Courses we offer
       quote: There is a moment in the life of any aspiring.
+      add_to_cart: cart
     show:
       course_detail: Course detail
       description: Description
@@ -93,7 +115,7 @@ en:
       trainer_name: Trainer's name
       course_fee: Course Fee
       duration: Duration
-      add_to_cart: Add to cart
+      add_to_cart: Cart
     lesson_outline:
       view_details: View details
       dont_have_any_lesson: We don't have any lesson for this course

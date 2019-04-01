@@ -1,0 +1,50 @@
+<section class="popular-course-area section-gap">
+  <div class="container">
+    <div class="row d-flex justify-content-center">
+      <div class="menu-content pb-70 col-lg-8">
+        <div class="title text-center">
+          <h1 class="mb-10"><%= t ".popular_course" %></h1>
+          <p><%= t ".momment_of_life" %></p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="active-popular-carusel">
+        <% if @courses %>
+          <% @courses.each do |course| %>
+            <div class="single-popular-carusel">
+              <div class="thumb-wrap relative">
+                <div class="thumb relative">
+                  <div class="overlay overlay-bg"></div>
+                  <%= image_tag "b1", size: Settings.size %>
+                </div>
+                <div class="meta d-flex justify-content-between">
+                  <p>
+                    <span class="lnr lnr-users"></span>
+                    <span class="lnr lnr-bubble"></span>
+                  </p>
+                  <h4>
+                    <%= change_currency_on params[:locale],
+                      course.price %>
+                  </h4>
+                </div>
+              </div>
+              <div class="details">
+                <a href="#">
+                  <h4>
+                    <%= t ".learn_design" %>
+                  </h4>
+                </a>
+                <p>
+                  <%= t ".content" %>
+                </p>
+              </div>
+            </div>
+          <% end %>
+        <% else %>
+          <p><%= t ".sorry" %></p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</section>

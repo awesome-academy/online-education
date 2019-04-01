@@ -52,6 +52,28 @@ vi:
   pages:
     index:
       home: Trang chủ
+    popular_course:
+      popular_course: Các khóa học phổ biến chúng tôi cung cấp
+      momment_of_life: Có một khoảnh khắc trong cuộc sống của bất kỳ tham vọng.
+      learn_design: Học thiết kế
+      content: " Khi truyền hình còn phổ biến, có một chương trình cực kỳ nổi
+        tiếng dựa trên nhân vật hư cấu vẫn còn phổ biến"
+      sorry: Xin lỗi, chúng tôi không có khóa học nào cho bạn bây giờ
+    upcoming_event:
+      child_through: Đại học qua đôi mắt trẻ thơ
+      lorem_ipsum: "Đối với hầu hết chúng ta, ý tưởng về thiên văn học là một 
+        cái gì đó chúng ta kết nối trực tiếp với các ngôi sao, kính viễn vọng và 
+        tầm nhìn tuyệt đẹp hiển thị trên các tầng trời."
+      upcoming: Sự kiện sắp tới của Viện chúng tôi
+      serious_astronomy: "Nếu bạn là một người cuồng tín thiên văn học nghiêm 
+        túc như nhiều người trong chúng ta"
+    cta_one:
+      apply_for_the_post: Áp dụng cho bài viết
+      instructor: Trở thành một người hướng dẫn
+      instructor_context: "Có một khoảnh khắc trong cuộc sống của bất kỳ tham 
+        vọng nhà thiên văn học đã đến lúc mua chiếc kính thiên văn đầu tiên đó. 
+        Nó hấp dẫn suy nghĩ về việc thiết lập trạm xem của riêng bạn cho dù đó 
+        là trên bộ bài."
   users:
     sign_up_success: Đăng kí thành công.
     sign_up_fail: Đăng kí thất bại.
@@ -88,6 +110,7 @@ vi:
       shop: Cửa hàng
       popular_course: Những khóa học khuyên dùng
       quote: Có một khoảnh khắc trong cuộc sống của bất kỳ tham vọng...
+      add_to_cart: Giỏ hàng
     show:
       course_detail: Chi tiết khóa học
       description: Mô tả
@@ -98,7 +121,7 @@ vi:
       trainer_name: Giảng viên
       course_fee: Học phí
       duration: Tổng thời gian
-      add_to_cart: Thêm vào giỏ hàng
+      add_to_cart: Giỏ hàng
     lesson_outline:
       view_details: Xem chi tiết
       dont_have_any_lesson: Chúng tôi chưa có bài học nào cho khóa học này

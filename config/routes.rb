@@ -10,20 +10,21 @@ Rails.application.routes.draw do
     delete "/logout", to: "users#destroy"
     post "/test_results", to: "test_results#create"
 
+    resources :shops, only: %i(index show)
+    resources :carts, only: %i(index destroy)
+    resources :trainer_candidates, only: %i(index)
     resources :users, only: %i(new create show destroy)
     resources :purchased_courses, only: %i(index show destroy)
+
     resources :courses, only: %i(show) do
       resources :lessons, only: %i(index new create)
       resources :trainer_candidates, only: %i(new create)
+      resources :carts, only: %i(create)
     end
     resources :lessons, only: %i(show) do
       resources :questions, only: %i(new create destroy)
     end
-    resources :shops, only: %i(index show) do
-      resources :carts, only: %i(index create destroy)
-    end
-    resources :trainer_candidates, only: %i(index)
-
+    
     namespace :admin do
       resources :courses, only: %i(index new create)
     end

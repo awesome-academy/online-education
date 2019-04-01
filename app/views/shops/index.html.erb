@@ -11,11 +11,12 @@
     </div>
     <div class="row">
       <% @courses.each do |course| %>
-        <div class="single-popular-carusel col-lg-3 col-md-6" >
+        <div class="single-blog col-lg-3 col-md-6">
           <div class="thumb-wrap relative fix-it">
             <div class="thumb relative">
               <div class="overlay overlay-bg"></div>
-              <%= link_to image_tag("b1"), shop_path(course) %>
+              <%= link_to image_tag("b1", size: Settings.size),
+                shop_path(course) %>
             </div>
             <div class="meta d-flex">
               <p>
@@ -26,20 +27,26 @@
                 <%= change_currency_on params[:locale], course.price %>
               </h4>
             </div>
-          </div>
-          <div class="details">
-            <a href="course-details.html">
-              <h4>
-                <%= link_to shop_path course do %>
-                  <% truncate course.name, length: Settings.trcate_name %>
-                <% end %>
-              </h4>
-            </a>
-            <p>
-              <%= truncate course.description, length: Settings.trcate_text %>
-            </p>
-          </div>
         </div>
+        <div class="details">
+          <a href="course-details.html">
+            <h4>
+              <%= link_to shop_path course do %>
+                <% truncate course.name, length: Settings.trcate_name %>
+              <% end %>
+            </h4>
+          </a>
+          <p>
+            <%= truncate course.description, length: Settings.trcate_text %>
+          </p>
+        </div>
+        <%= link_to course_carts_path(course), method: :post,
+          class: "details-btn d-flex justify-content-center 
+            align-items-center" do %>
+          <span class="details"><%= t ".add_to_cart" %></span>
+          <span class="lnr lnr-arrow-right"></span>
+        </div>
+        <% end %>
       <% end %>
     </div>
     <div class="kaminari">
