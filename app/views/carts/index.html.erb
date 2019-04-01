@@ -7,16 +7,17 @@
         class: "btn btn-outline-info btn-sm pull-right" %>
       <div class="clearfix"></div>
     </div>
-    <div class="card-body">
-      <div id="carts"><%= render "carts/cart" %></div>
-    </div>
-    <div class="card-footer">
-      <div class="pull-right footer-custom">
-        <%= link_to t(".checkout"), "#", class: "btn btn-danger pull-right" %>
-        <div class="pull-right total">
-          <div id="total"><%= render "carts/total_cost" %></div>
+      <div class="card-body">
+        <div id="carts"><%= render "carts/cart" %></div>
+      </div>
+      <div class="card-footer">
+        <div class="pull-right footer-custom">
+          <%= link_to t(".checkout"), purchased_courses_path, method: :post,
+            class: "btn btn-danger pull-right" %>
+          <div class="pull-right total">
+            <div id="total"><%= render "carts/total_cost" %></div>
+          </div>
         </div>
       </div>
-    </div>
   </div>
 </div>
