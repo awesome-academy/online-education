@@ -14,7 +14,7 @@ Rails.application.routes.draw do
     resources :carts, only: %i(index destroy)
     resources :trainer_candidates, only: %i(index)
     resources :users, only: %i(new create show destroy)
-    resources :purchased_courses, only: %i(index show destroy)
+    resources :purchased_courses, only: %i(index create show destroy)
 
     resources :courses, only: %i(show) do
       resources :lessons, only: %i(index new create)

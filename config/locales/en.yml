@@ -131,6 +131,8 @@ en:
     destroy_sucess: Delete successful
     destroy_fail: Delete failed
     no_course: This course doesn't exist
+    transaction_successful: Transaction successful
+    transaction_fail: Transaction fail
     index:
       course: Your Course
       available_course_of: Available course of

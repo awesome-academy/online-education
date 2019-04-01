@@ -137,6 +137,8 @@ vi:
     destroy_sucess: Xóa thành công
     destroy_fail: Xóa thất bại
     no_course: Khóa học này không tồn tại
+    transaction_successful: Giao dịch thành công
+    transaction_fail: Giao dịch thất bại
     index:
       course: Khóa học của bạn
       available_course_of: Những khóa học đã mua của
