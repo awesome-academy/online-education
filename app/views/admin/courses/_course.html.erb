@@ -1,0 +1,38 @@
+<div class="row">
+  <div class="col-12 col-sm-12 col-md-2 text-center">
+    <%= image_tag "b1", class: "img-course" %>
+  </div>
+  <div class="col-12 text-sm-center col-sm-12 text-md-left col-md-6">
+    <h4 class="product-name">
+      <strong><%= course.name %></strong>
+    </h4>
+    <h4>
+      <small>
+        <%= truncate course.employment_conditions,
+          length: Settings.text_length %>
+      </small>
+    </h4>
+  </div>
+  <div class="col-12 col-sm-12 text-sm-center col-md-4 text-md-right row">
+    <div class="col-4 col-sm-4 col-md-5 cost">
+      <h6>
+        <strong>
+          <%= t ".#{course.course_status}" %>
+        </strong>
+      </h6>
+    </div>
+    <div class="col-2 col-sm-2 col-md-7 text-right">
+      <div class="row">
+        <%= link_to admin_course_path(course),
+          class: "btn btn-outline-info btn-xs col-8" do %>
+          <%= t ".candidates"%>
+        <% end %>
+        <%= link_to admin_course_path(course), method: :delete, remote: true,
+          class: "btn btn-outline-danger btn-xs col-3 delete-btn" do %>
+          <i class="fa fa-trash" aria-hidden="true"></i>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+<hr>

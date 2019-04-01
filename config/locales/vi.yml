@@ -223,6 +223,8 @@ vi:
       description: Miêu tả
     index:
       course_recruiting: Các khóa học đang tuyển dụng
+    create:
+      apply_successful: Ứng tuyển thành công
   course:
     course_status:
       recruiting: Đang tuyển dụng
@@ -231,7 +233,11 @@ vi:
 
   admin:
     courses:
+      index:
+        list_course: Danh sách khóa học đang tuyển dụng
+        not_admin: Bạn không phải là admin
       new:
+        not_admin: Bạn không phải là admin
         create_course: Thêm khóa học
         create_new_course: Tạo khóa học mới
         name: Tên
@@ -254,3 +260,23 @@ vi:
         course_created: Tạo khóa học thành công
         assign_tag_fail: Thêm tag cho khóa học thất bại
         create_tag_fail: Tạo tag mới cho khóa học thất bại
+      update:
+        assign_trainer_success: Chỉ định làm giảng viên thành công
+        assign_trainer_failed: Chỉ định làm giảng viên thất bại
+      show:
+        trainer_candidates: Các ứng viên làm giảng viên
+        list_trainer_candidates: Danh sách ứng viên
+      course:
+        candidates: Ứng viên
+        recruiting: Đang tuyển dụng
+        building: Đang xây dựng
+        complete: Hoàn thành
+    trainer_candidates:
+      trainer_candidate:
+        introduce: "Giới thiệu: "
+        email: "Email: "
+        phone: "Điện thoại: "
+        position: "Vị trí: "
+        cv_url: "Đường dẫn tới CV: "
+        cv: CV
+        make_trainer: "Chỉ định"

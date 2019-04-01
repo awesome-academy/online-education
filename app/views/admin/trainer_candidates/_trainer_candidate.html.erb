@@ -1,0 +1,64 @@
+<div class="row">
+  <div class="col-10 text-sm-center col-sm-12 text-md-left col-md-9">
+    <h4 class="product-name">
+      <strong><%= trainer_candidate.user.last_name %></strong>
+    </h4>
+    <div class="row">
+      <div class="col col-xl-11 col-lg-12 col-md-12 col-sm-12 col-12">
+        <h4>
+          <small>
+            <%= t ".introduce" %>
+            <%= truncate trainer_candidate.introduce,
+              length: Settings.text_length %>
+          </small>
+        </h4>
+      </div>
+      <div class="col col-xl-4 col-lg-12 col-md-12 col-sm-12 col-12">
+        <h4>
+          <small>
+            <%= t ".email" %>
+            <%= truncate trainer_candidate.user.email,
+              length: Settings.text_length %>
+          </small>
+        </h4>
+      </div>
+      <div class="col col-xl-4 col-lg-12 col-md-12 col-sm-12 col-12">
+        <h4>
+          <small>
+            <%= t ".phone" %>
+            <%= truncate trainer_candidate.user.phone,
+              length: Settings.text_length %>
+          </small>
+        </h4>
+      </div>
+      <div class="col col-xl-4 col-lg-12 col-md-12 col-sm-12 col-12">
+        <h4>
+          <small>
+            <%= t ".position" %>
+            <%= truncate trainer_candidate.user.position,
+              length: Settings.text_length %>
+          </small>
+        </h4>
+      </div>
+      <div class="col col-xl-11 col-lg-12 col-md-12 col-sm-12 col-12">
+        <h4>
+          <small>
+            <%= t ".cv_url" %>
+            <%= link_to t(".cv"), trainer_candidate.cv_url %>
+          </small>
+        </h4>
+      </div>
+    </div>
+  </div>
+  <div class="col-12 col-sm-12 text-sm-center col-md-3 text-md-right row">
+    <div class="col-2 col-sm-2 col-md-12 text-right">
+      <div class="row">
+        <%= link_to admin_course_path(user_id: trainer_candidate.user_id),
+          class: "btn btn-outline-info btn-xs col-8", method: :put do %>
+          <%= t ".make_trainer" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+<hr>

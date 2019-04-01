@@ -202,7 +202,7 @@ en:
       long: "%B %d, %Y %H:%M"
       short: "%d %b %H:%M"
   test_results:
-    your_score: Your score 
+    your_score: Your score
   trainer_candidates:
     new:
       apply_to_course: Apply to course
@@ -214,6 +214,8 @@ en:
       apply: Apply
     index:
       course_recruiting: Recruiting courses
+    create:
+      apply_successful: Apply successful
   course:
     course_status:
       recruiting: Recruiting
@@ -222,7 +224,11 @@ en:
 
   admin:
     courses:
+      index:
+        list_course: List recruiting course
+        not_admin: You are not admin
       new:
+        not_admin: You are not admin
         create_course: Create course
         create_new_course: Create new course
         name: Name
@@ -245,3 +251,23 @@ en:
         course_created: Course created
         assign_tag_fail: Assign tag to course failed
         create_tag_fail: Create new tag for course failed
+      update:
+        assign_trainer_success: Assign trainer success
+        assign_trainer_failed: Assign trainer failed
+      show:
+        trainer_candidates: Trainer Candidates
+        list_trainer_candidates: List trainer caPndidates
+      course:
+        candidates: Candidates
+        recruiting: Recruiting
+        building: Building
+        complete: Complete
+    trainer_candidates:
+      trainer_candidate:
+        introduce: "Introduce: "
+        email: "Email: "
+        phone: "Phone: "
+        position: "Position: "
+        cv_url: "CV url: "
+        cv: CV
+        make_trainer: "Make trainer"
